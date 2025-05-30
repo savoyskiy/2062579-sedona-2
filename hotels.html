@@ -48,63 +48,59 @@
   <main class="main">
     <h1 class="page-header">Гостиницы Седоны</h1>
 
-    <!--хлебные крошки-->
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">
+          <span class="visually-hidden">Домашняя страница</span>
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Гостиницы</a>
+      </li>
+    </ul>
 
     <section class="selection">
       <h2 class="visually-hidden">Форма выбора гостиницы</h2>
 
-      <form class="selection__form" action="get">
+      <form class="selection__form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="selection__type selection__infrastructure">
-          <b class="selection__name">Инфраструктура:</b>
+          <legend class="selection__name">Инфраструктура:</legend>
 
-          <ul class="selection__list">
-            <li class="selection__item">
-              <label class="selection__text" for="pool">Бассейн</label>
-              <input class="selection__checkbox" type="checkbox" id="pool" checked>
-            </li>
-            <li class="selection__item">
-              <label class="selection__text" for="parking">Парковка</label>
-              <input class="selection__checkbox" type="checkbox" id="parking" checked>
-            </li>
-            <li class="selection__item">
-              <label class="selection__text" for="wifi">Wi-Fi</label>
-              <input class="selection__checkbox" type="checkbox" id="wifi">
-            </li>
-          </ul>
+          <label class="selection__text" for="pool">Бассейн</label>
+          <input class="selection__checkbox" type="checkbox" id="pool" name="pool" checked>
+
+          <label class="selection__text" for="parking">Парковка</label>
+          <input class="selection__checkbox" type="checkbox" id="parking" name="parking" checked>
+
+          <label class="selection__text" for="wifi">Wi-Fi</label>
+          <input class="selection__checkbox" type="checkbox" id="wifi" name="wifi">
         </fieldset>
 
-        <!--переделать блок ниже, нужен выбор одной кнопки из трех-->
-        <fieldset class="selection__type selection__hotel-type">
-          <b class="selection__name">Тип жилья:</b>
+        <fieldset class="selection__type hotel-type">
+          <legend class="selection__name">Тип жилья:</legend>
 
-          <ul class="selection__list">
-            <li class="selection__item">
-              <label class="selection__text" for="hotel">Гостиница</label>
-              <input class="selection__radio" type="radio" id="hotel" checked>
-            </li>
-            <li class="selection__item">
-              <label class="selection__text" for="motel">Мотель</label>
-              <input class="selection__radio" type="radio" id="motel">
-            </li>
-            <li class="selection__item">
-              <label class="selection__text" for="apartment">Апартаменты</label>
-              <input class="selection__radio" type="radio" id="apartment">
-            </li>
-          </ul>
+          <label class="selection__text" for="hotel">Гостиница</label>
+          <input class="selection__radio" type="radio" id="hotel"  name="hotel-type" value="hotel" checked>
+
+          <label class="selection__text" for="motel">Мотель</label>
+          <input class="selection__radio" type="radio" id="motel" name="hotel-type" value="motel">
+
+          <label class="selection__text" for="apartment">Апартаменты</label>
+          <input class="selection__radio" type="radio" id="apartment" name="hotel-type" value="apartment">
         </fieldset>
 
-        <fieldset class="selection__type selection__price">
-          <b class="selection__name">Стоимость, ₽:</b>
+        <fieldset class="selection__type price">
+          <legend class="selection__name">Стоимость, ₽:</legend>
 
           <label for="min-price">
-            <input class="selection__min-price" type="number" value="0" id="min-price">
+            <input class="selection__min-price" type="number" name="min-price" value="0" id="min-price">
           </label>
 
           <label for="max-price">
-            <input class="selection__max-price" type="number" value="9000" id="max-price">
+            <input class="selection__max-price" type="number" name="max-price" value="9000" id="max-price">
           </label>
 
-          <div class="selection__price-slider"></div>
+          <div class="selection__price-slider"></div><!--тут будет слайдер-->
 
         </fieldset>
 
