@@ -8,12 +8,11 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
+      <a class="navigation__logo-link" href="index.html">
+        <img class="navigation__logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона.">
+      </a>
+
       <ul class="navigation__list site-navigation">
-        <li class="navigation__logo">
-          <a class="navigation__link" href="index.html">
-            <img class="navigation__logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона.">
-          </a>
-        </li>
         <li class="navigation__item">
           <a class="navigation__link" href="index.html">Главная</a>
         </li>
@@ -21,7 +20,7 @@
           <a class="navigation__link" href="#">О Седоне</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Гостиницы</a>
+          <a class="navigation__link">Гостиницы</a>
         </li>
       </ul>
 
@@ -29,20 +28,16 @@
         <li class="navigation__item">
           <a class="navigation__link" href="#">
             <span class="visually-hidden">Поиск</span>
-            <img class="user-navigation__search" src="images/search.svg" width="20" height="20" alt="">
           </a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">
             <span class="visually-hidden">Избранное</span>
-            <img class="user-navigation__like" src="images/like.svg" width="20" height="20" alt="">
             <span class="user-navigation__like-number">12</span>
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            <span class="visually-hidden">Подбор гостиницы</span>
-          </a>
+          <button class="navigation__link" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </nav>
@@ -156,19 +151,16 @@
         <li class="view-list__item">
           <a class="view-list__link" href="catalog.html?view=tile">
             <span class="visually-hidden">Таблица</span>
-            <img class="view-list__image" src="images/mode__table.svg" width="16" height="14" alt="">
           </a>
         </li>
         <li class="view-list__item">
           <a class="view-list__link" href="catalog.html?view=card">
             <span class="visually-hidden">Слайдер</span>
-            <img class="view-list__image" src="images/mode__slider.svg" width="16" height="14" alt="">
           </a>
         </li>
         <li class="view-list__item">
           <a class="view-list__link" href="catalog.html?view=list">
             <span class="visually-hidden">Список</span>
-            <img class="view-list__image" src="images/mode__list.svg" width="16" height="14" alt="">
           </a>
         </li>
       </ul>

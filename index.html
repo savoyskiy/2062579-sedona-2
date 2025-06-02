@@ -9,14 +9,13 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
+      <a class="navigation__logo-link" href="index.html">
+        <img class="navigation__logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона.">
+      </a>
+
       <ul class="navigation__list site-navigation">
-        <li class="navigation__logo">
-          <a class="navigation__link" href="#">
-            <img class="navigation__logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона.">
-          </a>
-        </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Главная</a>
+          <a class="navigation__link">Главная</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">О Седоне</a>
@@ -30,20 +29,16 @@
         <li class="navigation__item">
           <a class="navigation__link" href="#">
             <span class="visually-hidden">Поиск</span>
-            <img class="user-navigation__search" src="images/search.svg" width="20" height="20" alt="">
           </a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">
             <span class="visually-hidden">Избранное</span>
-            <img class="user-navigation__like" src="images/like.svg" width="20" height="20" alt="">
             <span class="user-navigation__like-number">12</span>
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            <span class="visually-hidden">Подбор гостиницы</span>
-          </a>
+          <button class="navigation__link" type="button">Хочу сюда!</button>
         </li>
       </ul>
     </nav>
@@ -118,9 +113,9 @@
     <section class="search">
       <h2 class="visually-hidden search__heading">Поиск гостиницы</h2>
 
-      <b class="search__name">Заинтересовались?</b>
+      <p class="search__name">Заинтересовались?</p>
       <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="search__link" href="#">Поиск гостиницы в Седоне</a>
+      <button class="search__link" type="button">Поиск гостиницы в Седоне</button>
     </section>
 
     <section class="newsletter">
