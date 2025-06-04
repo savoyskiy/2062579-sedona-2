@@ -46,7 +46,7 @@
 
   <main class="main main-hotels">
     <header class="main-hotels__header">
-      <h1 class="page-header">Гостиницы Седоны</h1>
+      <h1 class="main-hotels__heading">Гостиницы Седоны</h1>
 
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
@@ -124,10 +124,10 @@
           <fieldset class="selection__buttons">
             <ul class="selection__list">
               <li class="selection__item">
-                <button class="selection__button" type="submit">Применить</button>
+                <button class="button selection__button selection__button--submit" type="submit">Применить</button>
               </li>
               <li class="selection__item">
-                <button class="selection__button" type="reset">Сбросить</button>
+                <button class="button selection__button selection__button--reset" type="reset">Сбросить</button>
               </li>
             </ul>
           </fieldset>
@@ -175,12 +175,12 @@
           </a>
           <p class="hotel-card__type">Гостиница</p>
           <p class="hotel-card__price">От 4000 ₽</p>
-          <a class="hotel-card__link" href="#">Подробнее</a>
-          <button class="hotel-card__like-button" type="button">В избранное</button>
+          <a class="button hotel-card__link" href="#">Подробнее</a>
+          <button class="button hotel-card__like-button" type="button">В избранное</button>
           <span class="hotel-card__stars">
             <span class="visually-hidden">4 звезды</span>
           </span>
-          <p class="hotel-card__rating">Рейтинг: 8,5</p>
+          <p class="button hotel-card__rating">Рейтинг: 8,5</p>
         </li>
         <li class="results__item hotel-card">
           <a class="hotel-card__image-link" href="#">
@@ -191,8 +191,8 @@
           </a>
           <p class="hotel-card__type">Гостиница</p>
           <p class="hotel-card__price">От 5000 ₽</p>
-          <a class="hotel-card__link" href="#">Подробнее</a>
-          <button class="hotel-card__like-button hotel-card__like-button--true" type="button">В избранном</button>
+          <a class="button hotel-card__link" href="#">Подробнее</a>
+          <button class="button hotel-card__like-button hotel-card__like-button--true" type="button">В избранном</button>
           <span class="hotel-card__stars">
             <span class="visually-hidden">4 звезды</span>
           </span>
@@ -207,8 +207,8 @@
           </a>
           <p class="hotel-card__type">Гостиница</p>
           <p class="hotel-card__price">От 2500 ₽</p>
-          <a class="hotel-card__link" href="#">Подробнее</a>
-          <button class="hotel-card__like-button" type="button">В избранное</button>
+          <a class="button hotel-card__link" href="#">Подробнее</a>
+          <button class="button hotel-card__like-button" type="button">В избранное</button>
           <span class="hotel-card__stars">
             <span class="visually-hidden">3 звезды</span>
           </span>
@@ -223,8 +223,8 @@
           </a>
           <p class="hotel-card__type">Гостиница</p>
           <p class="hotel-card__price">От 1500 ₽</p>
-          <a class="hotel-card__link" href="#">Подробнее</a>
-          <button class="hotel-card__like-button" type="button">В избранное</button>
+          <a class="button hotel-card__link" href="#">Подробнее</a>
+          <button class="button hotel-card__like-button" type="button">В избранное</button>
           <span class="hotel-card__stars">
             <span class="visually-hidden">2 звезды</span>
           </span>
@@ -234,7 +234,7 @@
 
       <ul class="results__pagination-list">
         <li class="results__pagination-item pagination">
-          <a class="pagination__link">1</a>
+          <a class="pagination__link pagination__link--current">1</a>
         </li>
         <li class="results__pagination-item pagination">
           <a class="pagination__link" href="#">2</a>
@@ -246,7 +246,7 @@
           <a class="pagination__link" href="#">4</a>
         </li>
         <li class="results__pagination-item pagination">
-          <a class="pagination__link">...</a>
+          <a class="pagination__link pagination__link--inner">...</a>
         </li>
         <li class="results__pagination-item pagination">
           <a class="pagination__link" href="#">10</a>
@@ -256,14 +256,14 @@
     </section>
 
     <section class="newsletter newsletter--hotels">
-      <h2 class="newsletter__heading">Подпишитесь на рассылку</h2>
-      <p class="newsletter__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <h2 class="newsletter__heading newsletter__heading--hotels">Подпишитесь на рассылку</h2>
+      <p class="newsletter__text newsletter__text--hotels">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
       <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="newsletter__input-wrapper">
           <input class="newsletter__email" type="email" name="email" placeholder="Ваш e-mail" required>
         </label>
-        <button class="newsletter__button" type="submit">Подписаться</button>
+        <button class="button newsletter__button" type="submit">Подписаться</button>
       </form>
     </section>
   </main>

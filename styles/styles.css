@@ -186,7 +186,150 @@
   background-color: #82b3d3;
 }
 
-/**/
+/*стили для страницы каталога*/
+.main-hotels__header {
+  background: url("../images/catalog__background.jpg") no-repeat;
+  background-size: cover;
+}
+
+.main-hotels__heading {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.breadcrumbs {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.breadcrumbs__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.selection__name {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.selection__text {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.selection__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.selection__button--submit {
+  background-color: #82b3d3;
+}
+
+.selection__button--reset {
+  background: none;
+}
+
+.results__number {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.hotel-card__heding {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-card__heading-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card__type,
+.hotel-card__price {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.hotel-card__link,
+.hotel-card__like-button {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.hotel-card__like-button {
+  background-color: #82b3d3;
+}
+
+.hotel-card__like-button--true {
+  background-color: #7db54f;
+}
+
+.hotel-card__rating {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination__link {
+  font-family: "PT_Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-decoration: none;
+}
+
+.pagination__link--current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination__link--inner {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.newsletter--hotels {
+  background: none;
+}
+
+.newsletter__heading--hotels {
+  color: #000000;
+}
+
+.newsletter__text--hotels {
+  color: #333333;
+}
+
+/*стили для футера*/
 .contact-phone {
   font-family: "PT_Sans", sans-serif;
   font-weight: 400;
