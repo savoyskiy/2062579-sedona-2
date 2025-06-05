@@ -49,7 +49,7 @@
 /*стили для мэйн главной страницы*/
 .about__image-wrapper {
   background-color: rgba(131, 179, 211, 0.7);
-  background-image: url("../images/index-back.svg"), url("../images/index__background.jpg");
+  background-image: url("../images/about__mask.svg"), url("../images/about__background.jpg");
   background-repeat: no-repeat;
   background-position: bottom left, top left;
 }
