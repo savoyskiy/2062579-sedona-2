@@ -34,7 +34,6 @@
 
 /*стили для хедера*/
 .navigation__link {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -56,7 +55,6 @@
 }
 
 .about__heading {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -64,15 +62,12 @@
 }
 
 .about__description {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
 .advantages__name {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -88,7 +83,6 @@
 }
 
 .advantages__item {
-  color: #000000;
   background-color: rgba(131, 179, 211, 0.12)
 }
 
@@ -102,7 +96,6 @@
 }
 
 .recommendation__invite {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -110,8 +103,6 @@
 }
 
 .recommendation__text {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -126,7 +117,6 @@
 }
 
 .recommendation__name {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -134,15 +124,10 @@
 }
 
 .recommendation__description {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
   color: #333333;
 }
 
 .search__name {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -150,8 +135,6 @@
 }
 
 .search__text {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -168,7 +151,6 @@
 }
 
 .newsletter__heading {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -177,8 +159,6 @@
 }
 
 .newsletter__text {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -199,7 +179,6 @@
 }
 
 .main-hotels__heading {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -208,10 +187,7 @@
 }
 
 .breadcrumbs {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 21px;
   color: #ffffff;
 }
 
@@ -221,7 +197,6 @@
 }
 
 .selection__name {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -229,9 +204,6 @@
 }
 
 .selection__text {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
   line-height: 23px;
   color: #ffffff;
 }
@@ -250,14 +222,12 @@
 }
 
 .results__number {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
 }
 
 .hotel-card__heding {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -270,16 +240,12 @@
 
 .hotel-card__type,
 .hotel-card__price {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
   line-height: 23px;
   color: #333333;
 }
 
 .hotel-card__link,
 .hotel-card__like-button {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -295,16 +261,15 @@
 }
 
 .hotel-card__rating {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   background-color: #f2f2f2;
+  text-transform: none;
 }
 
 .pagination__link {
-  font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -337,8 +302,6 @@
 
 /*стили для футера*/
 .contact-phone {
-  font-family: "PT_Sans", "Arial", sans-serif;
-  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
