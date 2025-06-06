@@ -49,7 +49,7 @@
 /*стили для мэйн главной страницы*/
 .about__image-wrapper {
   background-color: rgba(131, 179, 211, 0.7);
-  background-image: url("../images/about__mask.svg"), url("../images/about__background.jpg");
+  background-image: url("../images/about_mask.svg"), url("../images/about_background.jpg");
   background-repeat: no-repeat;
   background-position: bottom left, top left;
 }
@@ -147,7 +147,7 @@
 
 .newsletter {
   background-color: rgba(131, 179, 211, 0.7);
-  background-image: url("../images/newsletter__background.jpg");
+  background-image: url("../images/newsletter_background.jpg");
 }
 
 .newsletter__heading {
@@ -173,7 +173,7 @@
 /*стили для страницы каталога*/
 .main-hotels__header {
   background-color: rgba(131, 179, 211, 0.7);
-  background-image: url("../images/catalog__background.jpg");
+  background-image: url("../images/catalog_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
