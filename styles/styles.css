@@ -16,16 +16,17 @@
 
 /*общие стили*/
 .body {
+  margin: 0;
   font-family: "PT_Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 .button {
-  font-family: "PT_Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-weight: 700;
   color: #ffffff;
   background-color: #756157;
@@ -33,6 +34,10 @@
 }
 
 /*стили для хедера*/
+.page-header {
+  background-color: #ffffff;
+}
+
 .navigation__link {
   font-weight: 700;
   font-size: 20px;
@@ -46,7 +51,18 @@
   line-height: 20px;
 }
 
+.user-navigation__like-number {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7db54f;
+}
+
 /*стили для мэйн главной страницы*/
+.main {
+  background-color: #ffffff;
+}
+
 .about__image-wrapper {
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/about_mask.svg"), url("../images/about_background.jpg");
@@ -59,12 +75,14 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .about__description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  text-align: center;
 }
 
 .advantages__name {
@@ -72,10 +90,12 @@
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__description {
   color: #333333;
+  text-align: center;
 }
 
 .advantages__description--edge {
@@ -100,12 +120,14 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .recommendation__text {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  text-align: center;
 }
 
 .recommendation__item {
@@ -121,10 +143,12 @@
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .recommendation__description {
   color: #333333;
+  text-align: center;
 }
 
 .search__name {
@@ -132,12 +156,14 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .search__text {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  text-align: center;
 }
 
 .search__button {
@@ -156,12 +182,14 @@
   line-height: 36px;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .newsletter__text {
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
+  text-align: center;
 }
 
 .newsletter__button {
@@ -301,6 +329,10 @@
 }
 
 /*стили для футера*/
+.page-footer {
+  background-color: #ffffff;
+}
+
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
