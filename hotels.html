@@ -8,7 +8,7 @@
 
 <body class="body">
   <div class="page-container">
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="navigation__logo-link" href="index.html">
           <img class="navigation__logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона.">
@@ -45,7 +45,7 @@
       </nav>
     </header>
 
-    <main class="main main-hotels">
+    <main class="main main-hotels" data-test="main">
       <header class="main-hotels__header">
         <h1 class="main-hotels__heading">Гостиницы Седоны</h1>
 
@@ -60,7 +60,7 @@
           </li>
         </ul>
 
-        <section class="selection">
+        <section class="selection" data-test="filter">
           <h2 class="visually-hidden">Форма выбора гостиницы</h2>
 
           <form class="selection__form" action="https://echo.htmlacademy.ru/" method="get">
@@ -136,7 +136,7 @@
         </section>
       </header>
 
-      <section class="results">
+      <section class="results" data-test="catalog">
         <h2 class="visually-hidden results__heading">Результаты поиска гостиниц</h2>
 
         <b class="results__number">Найдено гостиниц: 38</b>
@@ -256,7 +256,7 @@
 
       </section>
 
-      <section class="newsletter newsletter--hotels">
+      <section class="newsletter newsletter--hotels" data-test="subscribe">
         <h2 class="newsletter__heading newsletter__heading--hotels">Подпишитесь на рассылку</h2>
         <p class="newsletter__text newsletter__text--hotels">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -269,7 +269,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <ul class="socials">
         <li class="socials__item">
           <a class="socials__link" href="https://vk.com/htmlacademy">
