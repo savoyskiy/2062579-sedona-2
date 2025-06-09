@@ -53,6 +53,7 @@ html {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation__logo-link {
@@ -61,6 +62,7 @@ html {
 
 .navigation__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -190,6 +192,7 @@ html {
 
 .recommendation__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -426,6 +429,7 @@ html {
 
 .results__pagination-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -466,6 +470,7 @@ html {
 /*стили для футера*/
 .page-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 70px;
   background-color: #ffffff;
