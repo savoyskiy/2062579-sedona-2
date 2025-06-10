@@ -35,6 +35,7 @@ html {
   min-height: 100vh;
   margin: 0 auto;
   width: 1200px;
+  background-color: #ffffff;
 }
 
 .button {
@@ -48,7 +49,6 @@ html {
 /*стили для хедера*/
 .page-header {
   padding: 0 70px;
-  background-color: #ffffff;
 }
 
 .navigation {
@@ -100,7 +100,6 @@ html {
 /*стили для мэйн главной страницы*/
 .main {
   flex-grow: 1;
-  background-color: #ffffff;
 }
 
 .about__image-wrapper {
@@ -473,7 +472,6 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 70px;
-  background-color: #ffffff;
 }
 
 .socials {
