@@ -70,7 +70,14 @@ html {
 }
 
 .navigation__logo-link {
+  display: block;
   margin-right: 30px;
+  margin-bottom: -6px;
+  z-index: 1;
+}
+
+.navigation__logo {
+  display: block;
 }
 
 .navigation__list {
@@ -90,7 +97,14 @@ html {
   min-width: 268px;
 }
 
+.user-navigation__item {
+  min-height: 64px;
+  min-width: 12px;
+}
+
 .navigation__link {
+  display: block;
+  padding: 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -98,9 +112,16 @@ html {
   text-decoration: none;
 }
 
+.navigation__button-wrapper {
+  padding: 14px 0 14px 20px;
+}
+
 .navigation__button {
+  padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
+  border-width: 0;
+  border-radius: 4px;
 }
 
 .user-navigation__like-number {
@@ -116,6 +137,8 @@ html {
 }
 
 .about__image-wrapper {
+  margin-bottom: 69px;
+  padding: 51px 371px 82px;
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/about_mask.svg"), url("../images/about_background.jpg");
   background-repeat: no-repeat;
@@ -128,6 +151,9 @@ html {
 }
 
 .about__heading {
+  display: block;
+  max-width: 620px;
+  margin: 0 auto 25px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -136,6 +162,9 @@ html {
 }
 
 .about__description {
+  display: block;
+  max-width: 651px;
+  margin: 0 auto 90px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -150,7 +179,16 @@ html {
   list-style-type: none;
 }
 
+.advantages__text-wrapper {
+  padding: 102px 85px;
+}
+
+.advantages__text-wrapper--middle {
+  padding: 112px 85px;
+}
+
 .advantages__name {
+  margin: 0 0 62px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -159,6 +197,7 @@ html {
 }
 
 .advantages__description {
+  margin: 0;
   color: #333333;
   text-align: center;
 }
@@ -312,6 +351,7 @@ html {
 }
 
 .main-hotels__heading {
+  margin: 0;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
