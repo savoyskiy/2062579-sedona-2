@@ -352,7 +352,7 @@ html {
 }
 
 .newsletter__email {
-  width: 452px;
+  width: 412px;
   padding: 14px 20px;
   font-size: inherit;
   line-height: 24px;
@@ -492,17 +492,24 @@ html {
   list-style-type: none;
 }
 
-.results__item {
-  width: 298px;
-}
-
 .hotel-card {
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  padding: 18px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
+.hotel-card__image {
+  display: block;
+  margin-bottom: 16px;
+}
+
 .hotel-card__heding {
+  display: block;
+  width: 300px;
+  margin: 0 0 16px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -519,6 +526,19 @@ html {
   color: #333333;
 }
 
+.hotel-card__type {
+  display: block;
+  width: 140px;
+  margin: 0 20px 16px 0;
+}
+
+.hotel-card__price {
+  display: block;
+  width: 140px;
+  margin: 0 0 16px 0;
+  text-align: end;
+}
+
 .hotel-card__link,
 .hotel-card__like-button {
   font-weight: 700;
@@ -527,7 +547,22 @@ html {
   text-decoration: none;
 }
 
+.hotel-card__link {
+  display: block;
+  width: 88px;
+  margin: 0 20px 16px 0;
+  padding: 8px 26px;
+  border-radius: 4px;
+}
+
 .hotel-card__like-button {
+  display: block;
+  width: 140px;
+  margin: 0 0 16px 0;
+  padding: 8px 18px;
+  text-align: center;
+  border-width: 0;
+  border-radius: 4px;
   background-color: #82b3d3;
 }
 
@@ -535,13 +570,27 @@ html {
   background-color: #7db54f;
 }
 
+.hotel-card__stars {
+  display: flex;
+  gap: 6px;
+  width: 140px;
+  margin-right: 20px;
+  padding: 10px 0;
+  outline: 1px dotted #000000; /*временное правило*/
+ }
+
 .hotel-card__rating {
+  display: block;
+  width: 95px;
+  margin: 0;
+  padding: 9px 22px 8px 23px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   background-color: #f2f2f2;
-  text-transform: none;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .results__pagination-list {
@@ -594,13 +643,27 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
 }
 
 .socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 142px;
   margin: 0;
-  padding: 5px 0;
+  padding: 0;
   list-style-type: none;
+}
+
+.socials__item {
+  display: grid;
+  place-items: center;
+}
+
+.socials__link {
+  height: 100%;
+  width: 100%;
+  outline: 1px dotted #000000; /*временное свойство*/
 }
 
 .contact-phone {
@@ -609,4 +672,11 @@ html {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.academy-link {
+  min-width: 115px; /*временное свойство*/
+  min-height: 33px; /*временное свойство*/
+  padding: 3px 0 0 27px; /*временное свойство*/
+  outline: 1px dotted #000000; /*временное свойство*/
 }
