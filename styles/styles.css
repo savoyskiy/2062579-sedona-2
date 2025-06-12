@@ -356,6 +356,7 @@ html {
   padding: 14px 20px;
   font-size: inherit;
   line-height: 24px;
+  background-color: #f2f2f2;
   border-width: 0;
   border-radius: 4px 0 0 4px;
 }
@@ -440,10 +441,46 @@ html {
   padding: 0 70px;
 }
 
+.results__header-wrapper {
+  display: flex;
+  padding: 50px 0 40px;
+}
+
 .results__number {
+  display: block;
+  margin-right: 200px;
+  padding-top: 6px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
+}
+
+.view-list {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.view-list__link {
+  display: block;
+  min-width: 16px;
+  min-height: 14px;
+  padding: 15px 14px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.sorting {
+  width: 292px;
+  margin-right: 70px;
+  padding: 12px 50px 12px 18px;
+  font-size: inherit;
+  line-height: 21px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .results__list {

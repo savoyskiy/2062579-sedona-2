@@ -139,32 +139,34 @@
       <section class="results" data-test="catalog">
         <h2 class="visually-hidden results__heading">Результаты поиска гостиниц</h2>
 
-        <b class="results__number">Найдено гостиниц: 38</b>
+        <div class="results__header-wrapper">
+          <b class="results__number">Найдено гостиниц: 38</b>
 
-        <select class="results__select sorting" id="sorting" name="sorting">
-          <option class="sorting__option" value="cheap">Сначала дешевые</option>
-          <option class="sorting__option" value="expensive">Сначала дорогие</option>
-          <option class="sorting__option" value="topstar">Сначала лучшие</option>
-          <option class="sorting__option" value="lowstar">Сначала простые</option>
-        </select>
+          <select class="results__select sorting" id="sorting" name="sorting">
+            <option class="sorting__option" value="cheap">Сначала дешевые</option>
+            <option class="sorting__option" value="expensive">Сначала дорогие</option>
+            <option class="sorting__option" value="topstar">Сначала лучшие</option>
+            <option class="sorting__option" value="lowstar">Сначала простые</option>
+          </select>
 
-        <ul class="results__view view-list">
-          <li class="view-list__item">
-            <a class="view-list__link" href="catalog.html?view=tile">
-              <span class="visually-hidden">Таблица</span>
-            </a>
-          </li>
-          <li class="view-list__item">
-            <a class="view-list__link" href="catalog.html?view=card">
-              <span class="visually-hidden">Слайдер</span>
-            </a>
-          </li>
-          <li class="view-list__item">
-            <a class="view-list__link" href="catalog.html?view=list">
-              <span class="visually-hidden">Список</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="results__view view-list">
+            <li class="view-list__item">
+              <a class="view-list__link" href="catalog.html?view=tile">
+                <span class="visually-hidden">Таблица</span>
+              </a>
+            </li>
+            <li class="view-list__item">
+              <a class="view-list__link" href="catalog.html?view=card">
+                <span class="visually-hidden">Слайдер</span>
+              </a>
+            </li>
+            <li class="view-list__item">
+              <a class="view-list__link" href="catalog.html?view=list">
+                <span class="visually-hidden">Список</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <ul class="results__list">
           <li class="results__item hotel-card">
