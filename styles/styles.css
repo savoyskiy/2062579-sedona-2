@@ -226,7 +226,14 @@ html {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.recommendation {
+  padding-top: 64px;
+}
+
 .recommendation__invite {
+  display: block;
+  max-width: 505px;
+  margin: 0 auto 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -235,6 +242,9 @@ html {
 }
 
 .recommendation__text {
+  display: block;
+  max-width: 490px;
+  margin: 0 auto 64px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -250,7 +260,8 @@ html {
 }
 
 .recommendation__item {
-  width: 400px;
+  width: 230px;
+  padding: 183px 85px 81px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -259,6 +270,7 @@ html {
 }
 
 .recommendation__name {
+  margin: 0 0 30px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -267,6 +279,7 @@ html {
 }
 
 .recommendation__description {
+  margin: 0;
   color: #333333;
   text-align: center;
 }
@@ -277,6 +290,7 @@ html {
 }
 
 .search__name {
+  margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -285,6 +299,7 @@ html {
 }
 
 .search__text {
+  margin: 0 0 54px 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -295,19 +310,23 @@ html {
   display: block;
   width: 376px;
   margin: 0 auto;
+  padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
+  border-width: 0;
+  border-radius: 4px;
 }
 
 .newsletter {
   width: 684px;
-  padding: 96px 258px 104px 258px;
+  padding: 96px 258px 104px;
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/newsletter_background.jpg");
   background-repeat: no-repeat;
 }
 
 .newsletter__heading {
+  margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -317,6 +336,7 @@ html {
 }
 
 .newsletter__text {
+  margin: 0 0 54px 0;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -332,13 +352,21 @@ html {
 }
 
 .newsletter__email {
-  width: 452px
+  width: 452px;
+  padding: 14px 20px;
+  font-size: inherit;
+  line-height: 24px;
+  border-width: 0;
+  border-radius: 4px 0 0 4px;
 }
 
 .newsletter__button {
+  padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
+  border-width: 0;
+  border-radius: 0 4px 4px 0;
 }
 
 /*стили для страницы каталога*/
@@ -524,12 +552,12 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 40px 70px 30px;
 }
 
 .socials {
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
   list-style-type: none;
 }
 
