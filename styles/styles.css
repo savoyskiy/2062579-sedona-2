@@ -372,7 +372,7 @@ html {
 
 /*стили для страницы каталога*/
 .main-hotels__header {
-  padding: 0 70px 70px;
+  padding: 35px 70px 70px;
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/catalog_background.jpg");
   background-repeat: no-repeat;
@@ -413,9 +413,18 @@ html {
 }
 
 .selection__type {
-  margin-right: 70px;
+  margin: 0 70px 0 0;
   padding: 0;
   border: none;
+}
+
+.infrastructure,
+.hotel-type {
+  width: 150px;
+}
+
+.price {
+  width: 288px;
 }
 
 .selection__list {
@@ -424,12 +433,17 @@ html {
   list-style-type: none;
 }
 
+.selection__item {
+  margin: 0 0 16px 0;
+}
+
 .hotel-type {
   margin-right: 140px;
 }
 
 .selection__name {
   margin: 0 0 32px 0;
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -442,13 +456,19 @@ html {
 }
 
 .selection__buttons {
-  padding: 0;
+  margin: 0;
+  padding: 56px 0 0 0;
   border: none;
 }
 
 .selection__button {
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 8px 50px;
   font-size: 16px;
   line-height: 20px;
+  border: none;
+  border-radius: 4px;
 }
 
 .selection__button--submit {
