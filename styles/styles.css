@@ -440,6 +440,10 @@ html {
   margin: 0 0 16px 0;
 }
 
+.selection__item:last-child {
+  margin-bottom: 0;
+}
+
 .hotel-type {
   margin-right: 140px;
 }
@@ -466,7 +470,7 @@ html {
 
 .selection__button {
   width: 100%;
-  margin: 0 0 16px 0;
+  margin: 0;
   padding: 8px 50px;
   font-size: 16px;
   line-height: 20px;
@@ -475,6 +479,7 @@ html {
 }
 
 .selection__button--submit {
+  margin-bottom: 32px;
   background-color: #82b3d3;
 }
 
