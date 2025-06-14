@@ -83,13 +83,13 @@ html {
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 400px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .site-navigation {
+  max-width: 600px;
   margin-right: auto;
 }
 
@@ -657,8 +657,9 @@ html {
 .pagination__link {
   display: grid;
   place-items: center;
-  min-width: 60px;
-  height: 60px;
+  min-width: 40px;
+  height: 40px;
+  padding: 10px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
