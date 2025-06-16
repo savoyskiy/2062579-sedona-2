@@ -119,6 +119,7 @@ html {
 }
 
 .navigation__button {
+  width: 160px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
@@ -498,12 +499,14 @@ html {
 
 .results__header-wrapper {
   display: flex;
+  width: 100%;
   padding: 50px 0 40px;
 }
 
 .results__number {
   display: block;
-  margin-right: 200px;
+  width: 400px;
+  margin-right: auto;
   padding-top: 6px;
   font-weight: 700;
   font-size: 30px;
