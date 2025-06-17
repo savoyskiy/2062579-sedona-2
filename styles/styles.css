@@ -567,9 +567,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
-  padding: 18px;
-  border: 1px solid #e6e6e6;
+  padding: 20px;
   border-radius: 4px;
+  outline: 1px solid #e6e6e6;
 }
 
 .hotel-card__image-link {
