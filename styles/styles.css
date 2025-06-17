@@ -93,17 +93,6 @@ html {
   margin-right: auto;
 }
 
-.user-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  width: 268px;
-}
-
-.user-navigation__item {
-  min-height: 64px;
-  min-width: 12px;
-}
-
 .navigation__link {
   display: block;
   padding: 20px 16px;
@@ -112,6 +101,22 @@ html {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 268px;
+}
+
+.user-navigation__link {
+  width: 20px;
+  height: 20px;
+  padding: 22px 12px;
+}
+
+.user-navigation__like-number {
+  text-wrap: nowrap;
 }
 
 .navigation__button-wrapper {
@@ -184,6 +189,7 @@ html {
 
 .advantages__text-wrapper {
   padding: 102px 85px;
+  width: 230px;
 }
 
 .advantages__text-wrapper--middle {
@@ -205,12 +211,16 @@ html {
   text-align: center;
 }
 
+.advantages__photo {
+  max-width: 800px;
+  object-fit: contain;
+}
+
 .advantages__description--edge {
   color: #ffffff;
 }
 
 .advantages__item {
-  width: 400px;
   background-color: rgba(131, 179, 211, 0.12)
 }
 
@@ -354,6 +364,7 @@ html {
 }
 
 .newsletter__input-wrapper {
+  display: flex;
   flex-grow: 1;
 }
 
@@ -561,9 +572,15 @@ html {
   border-radius: 4px;
 }
 
+.hotel-card__image-link {
+  margin-bottom: 16px;
+  background-color: #82b3d3;
+}
+
 .hotel-card__image {
   display: block;
-  margin-bottom: 16px;
+  max-width: 300px;
+  object-fit: contain;
 }
 
 .hotel-card__heding {
@@ -729,6 +746,8 @@ html {
 }
 
 .contact-phone {
+  display: block;
+  width: 331px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
