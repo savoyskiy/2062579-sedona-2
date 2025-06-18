@@ -564,8 +564,10 @@ html {
 }
 
 .hotel-card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  row-gap: 16px;
+  column-gap: 20px;
   width: 300px;
   padding: 20px;
   border-radius: 4px;
@@ -573,7 +575,7 @@ html {
 }
 
 .hotel-card__image-link {
-  margin-bottom: 16px;
+  grid-column: 1 / -1;
   background-color: #82b3d3;
 }
 
@@ -586,13 +588,14 @@ html {
 .hotel-card__heding {
   display: block;
   width: 300px;
-  margin: 0 0 16px 0;
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
 
 .hotel-card__heading-link {
+  grid-column: 1 / -1;
   color: #000000;
   text-decoration: none;
 }
@@ -606,13 +609,13 @@ html {
 .hotel-card__type {
   display: block;
   width: 140px;
-  margin: 0 20px 16px 0;
+  margin: 0;
 }
 
 .hotel-card__price {
   display: block;
   width: 140px;
-  margin: 0 0 16px 0;
+  margin: 0;
   text-align: end;
 }
 
@@ -627,7 +630,7 @@ html {
 .hotel-card__link {
   display: block;
   width: 88px;
-  margin: 0 20px 16px 0;
+  margin: 0;
   padding: 8px 26px;
   border-radius: 4px;
 }
@@ -635,7 +638,7 @@ html {
 .hotel-card__like-button {
   display: block;
   width: 140px;
-  margin: 0 0 16px 0;
+  margin: 0;
   padding: 8px 18px;
   text-align: center;
   border-width: 0;
@@ -651,7 +654,6 @@ html {
   display: flex;
   gap: 6px;
   width: 140px;
-  margin-right: 20px;
   padding: 10px 0;
   outline: 1px dotted #000000; /*временное правило*/
  }
