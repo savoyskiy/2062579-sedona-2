@@ -221,7 +221,10 @@ html {
 }
 
 .advantages__item {
-  background-color: rgba(131, 179, 211, 0.12)
+  display: flex;
+  justify-content: center;
+  background-color: rgba(131, 179, 211, 0.12);
+  flex-grow: 1;
 }
 
 .advantages__item--edge {
