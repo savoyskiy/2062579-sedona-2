@@ -590,6 +590,7 @@ html {
 .hotel-card__heding {
   display: block;
   width: 300px;
+  min-height: 28px;
   margin: 0;
   text-transform: none;
 }
@@ -602,6 +603,8 @@ html {
 
 .hotel-card__type,
 .hotel-card__price {
+  display: block;
+  min-height: 23px;
   line-height: 23px;
   color: #333333;
 }
