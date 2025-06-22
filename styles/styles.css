@@ -231,9 +231,26 @@ html {
 }
 
 .advantages__description {
+  position: relative;
   margin: 0;
   color: #333333;
   text-align: center;
+}
+
+.advantages__description::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #000000;
+  opacity: 30%;
+}
+
+.advantages__description--edge.advantages__description::before {
+  background-color: #ffffff;
 }
 
 .advantages__photo {
@@ -300,10 +317,30 @@ html {
 }
 
 .recommendation__item {
+  position: relative;
   width: 230px;
   min-height: 121px;
   padding: 183px 85px 81px;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.recommendation__item::before {
+  position: absolute;
+  top: 81px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recommendation__house.recommendation__item::before {
+  content: url("../images/recomendation_house.svg");
+}
+
+.recommendation__food.recommendation__item::before {
+  content: url("../images/recomendation_food.svg");
+}
+
+.recommendation__gift.recommendation__item::before {
+  content: url("../images/recomendation_gift.svg");
 }
 
 .recommendation__item:nth-child(even) {
@@ -774,7 +811,7 @@ html {
 }
 
 .academy-link {
-  min-width: 115px; /*временное свойство*/
-  min-height: 33px; /*временное свойство*/
-  padding: 3px 0 0 27px; /*временное свойство*/
+  width: 115px;
+  height: 33px;
+  padding: 3px 0 0 27px;
 }
