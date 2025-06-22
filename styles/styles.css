@@ -756,10 +756,11 @@ html {
 }
 
 .socials__link {
+  display: grid;
+  place-items: center;
   height: 100%;
   min-height: 40px;
   width: 100%;
-  outline: 1px dotted #000000; /*временное свойство*/
 }
 
 .contact-phone {
@@ -776,5 +777,4 @@ html {
   min-width: 115px; /*временное свойство*/
   min-height: 33px; /*временное свойство*/
   padding: 3px 0 0 27px; /*временное свойство*/
-  outline: 1px dotted #000000; /*временное свойство*/
 }
