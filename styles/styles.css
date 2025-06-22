@@ -245,12 +245,8 @@ html {
   transform: translateX(-50%);
   width: 60px;
   height: 2px;
-  background-color: #000000;
+  background-color: currentColor;
   opacity: 30%;
-}
-
-.advantages__description--edge.advantages__description::before {
-  background-color: #ffffff;
 }
 
 .advantages__photo {
@@ -743,7 +739,22 @@ html {
   gap: 6px;
   width: 140px;
   padding: 10px 0;
-  outline: 1px dotted #000000; /*временное правило*/
+  background-image: url("../images/star.svg");
+  background-repeat: space no-repeat;
+  background-size: auto;
+  background-position: 0 center;
+ }
+
+ .stars-2 {
+  width: 42px;
+ }
+
+ .stars-3 {
+  width: 66px;
+ }
+
+ .stars-4 {
+  width: 89px;
  }
 
 .hotel-card__rating {
