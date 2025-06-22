@@ -130,12 +130,22 @@ html {
 }
 
 .user-navigation__link {
+  position: relative;
   width: 20px;
   height: 20px;
   padding: 22px 12px;
 }
 
 .user-navigation__like-number {
+  position: absolute;
+  top: 12px;
+  left: 21px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  font-weight: 400;
+  border-radius: 50%;
   text-wrap: nowrap;
 }
 
