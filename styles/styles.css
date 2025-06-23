@@ -513,6 +513,20 @@ html {
   border-radius: 4px 0 0 4px;
 }
 
+.newsletter__email:hover {
+  background-color: #e6e6e6;
+}
+
+.newsletter__email:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.newsletter__email:not(:placeholder-shown) {
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
 .newsletter__button {
   padding: 8px 50px;
   font-size: 20px;
@@ -912,6 +926,23 @@ html {
 .pagination__link--inner {
   color: #000000;
   background-color: #ffffff;
+}
+
+.pagination__link[href]:hover {
+  background-color: #68a2ca;
+}
+
+.pagination__link[href]:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.pagination__link[href]:active {
+  background-color: #82b3d3;
+}
+
+.pagination__link[href]:active .pagination__number {
+  opacity: 30%;
 }
 
 .newsletter--hotels {
