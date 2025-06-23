@@ -65,6 +65,7 @@ html {
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -202,6 +203,28 @@ html {
   line-height: 20px;
   border-width: 0;
   border-radius: 4px;
+}
+
+.navigation__button:hover {
+  background-color: #615048;
+}
+
+.navigation__button:focus-visible {
+  background-color: #615048;
+  outline: none;
+}
+
+.navigation__button:active {
+  background-color: #756157;
+}
+
+.navigation__button:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.navigation__button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .user-navigation__like-number {
