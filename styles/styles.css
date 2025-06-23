@@ -449,6 +449,28 @@ html {
   border-radius: 4px;
 }
 
+.search__button:hover {
+  background-color: #615048;
+}
+
+.search__button:focus-visible {
+  background-color: #615048;
+  outline: none;
+}
+
+.search__button:active {
+  background-color: #756157;
+}
+
+.search__button:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.search__button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
 .newsletter {
   width: 684px;
   min-height: 214px;
