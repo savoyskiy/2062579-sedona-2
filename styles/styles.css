@@ -97,6 +97,16 @@ html {
   z-index: 1;
 }
 
+.navigation__logo-link:hover,
+.navigation__logo-link:focus-visible {
+  opacity: 70%;
+  outline: none;
+}
+
+.navigation__logo-link:active {
+  opacity: 30%;
+}
+
 .navigation__logo {
   display: block;
 }
@@ -115,6 +125,7 @@ html {
 }
 
 .navigation__link {
+  position: relative;
   display: block;
   padding: 20px 16px;
   font-weight: 700;
@@ -122,6 +133,36 @@ html {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation__link[href]:hover,
+.navigation__link[href]:hover path {
+  color: #756257;
+  fill: #756257;
+}
+
+.navigation__link[href]:focus-visible,
+.navigation__link[href]:focus-visible path {
+  color: #756257;
+  outline: none;
+  fill: #756257;
+}
+
+.navigation__link[href]:active,
+.navigation__link[href]:active path {
+  color: #756257;
+  opacity: 30%;
+  fill: #756257;
+}
+
+.navigation__link--current::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -1px;
+  left: 16px;
+  right: 16px;
+  background-color: #756257;
 }
 
 .user-navigation {
