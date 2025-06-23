@@ -850,6 +850,23 @@ html {
   width: 100%;
 }
 
+.socials__link:hover path {
+  fill: #68a2ca;
+}
+
+.socials__link:focus-visible path {
+  fill: #68a2ca;
+}
+
+.socials__link:focus-visible {
+  outline: none;
+}
+
+.socials__link:active path {
+  fill: #68a2ca;
+  opacity: 30%;
+}
+
 .contact-phone {
   display: block;
   width: 333px;
@@ -860,8 +877,39 @@ html {
   text-decoration: none;
 }
 
+.contact-phone:hover {
+  color: #756157;
+}
+
+.contact-phone:focus-visible {
+  color: #756157;
+  outline: none;
+}
+
+.contact-phone:active {
+  color: #756157;
+  opacity: 30%;
+}
+
 .academy-link {
   width: 115px;
   height: 33px;
   padding: 3px 0 0 27px;
+}
+
+.academy-link:hover path {
+  fill: #756157;
+}
+
+.academy-link:focus-visible path {
+  fill: #756157;
+}
+
+.academy-link:focus-visible {
+  outline: none;
+}
+
+.academy-link:active path {
+  fill: #756157;
+  opacity: 30%;
 }
