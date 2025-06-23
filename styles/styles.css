@@ -785,6 +785,19 @@ html {
   background-color: #82b3d3;
 }
 
+.hotel-card__image-link:hover {
+  opacity: 70%;
+}
+
+.hotel-card__image-link:focus-visible {
+  opacity: 70%;
+  outline: none;
+}
+
+.hotel-card__image-link:active {
+  opacity: 30%;
+}
+
 .hotel-card__image {
   display: block;
   max-width: 300px;
@@ -803,6 +816,20 @@ html {
   grid-column: 1 / -1;
   color: #000000;
   text-decoration: none;
+}
+
+.hotel-card__heading-link:hover {
+  color: #756257;
+}
+
+.hotel-card__heading-link:focus-visible {
+  color: #756257;
+  outline: none;
+}
+
+.hotel-card__heading-link:active {
+  color: #756257;
+  opacity: 30%;
 }
 
 .hotel-card__type,
@@ -842,6 +869,23 @@ html {
   border-radius: 4px;
 }
 
+.hotel-card__link:hover {
+  background-color: #615048;
+}
+
+.hotel-card__link:focus-visible {
+  background-color: #615048;
+  outline: none;
+}
+
+.hotel-card__link:active {
+  background-color: #756157;
+}
+
+.hotel-card__link:active .button__text {
+  opacity: 30%;
+}
+
 .hotel-card__like-button {
   display: block;
   width: 140px;
@@ -853,8 +897,52 @@ html {
   background-color: #82b3d3;
 }
 
+.hotel-card__like-button:hover {
+  background-color: #68a2ca;
+}
+
+.hotel-card__like-button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.hotel-card__like-button:active {
+  background-color: #82b3d3;
+}
+
+.hotel-card__like-button:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.hotel-card__like-button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
 .hotel-card__like-button--true {
   background-color: #7db54f;
+}
+
+.hotel-card__like-button--true:hover {
+  background-color: #6c9e42;
+}
+
+.hotel-card__like-button--true:focus-visible {
+  background-color: #6c9e42;
+  outline: none;
+}
+
+.hotel-card__like-button--true:active {
+  background-color: #7db54f;
+}
+
+.hotel-card__like-button--true:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.hotel-card__like-button--true:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
 }
 
 .hotel-card__stars {
