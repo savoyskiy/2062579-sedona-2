@@ -522,6 +522,28 @@ html {
   border-radius: 0 4px 4px 0;
 }
 
+.newsletter__button:hover {
+  background-color: #68a2ca;
+}
+
+.newsletter__button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.newsletter__button:active {
+  background-color: #82b3d3;
+}
+
+.newsletter__button:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.newsletter__button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
 /*стили для страницы каталога*/
 .main-hotels__header {
   padding: 35px 70px 70px;
