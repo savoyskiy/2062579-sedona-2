@@ -609,6 +609,19 @@ html {
   text-decoration: none;
 }
 
+.breadcrumbs__link[href]:hover {
+  opacity: 60%;
+}
+
+.breadcrumbs__link:focus-visible {
+  opacity: 100%;
+  outline: none;
+}
+
+.breadcrumbs__link[href]:active {
+  opacity: 30%;
+}
+
 .breadcrumbs__home {
   display: block;
   width: 13px;
@@ -688,8 +701,44 @@ html {
   background-color: #82b3d3;
 }
 
+.selection__button--submit:hover {
+  background-color: #68A2CA;
+}
+
+.selection__button--submit:focus-visible {
+  background-color: #68A2CA;
+  outline: none;
+}
+
+.selection__button--submit:active {
+  background-color: #82B3D3;
+}
+
+.selection__button--submit:not(:disabled):active .button__text {
+  opacity: 30%;
+}
+
+.selection__button--submit:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
 .selection__button--reset {
   background: none;
+}
+
+.selection__button--reset:hover {
+  opacity: 60%;
+}
+
+.selection__button--reset:focus-visible {
+  opacity: 100%;
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
+}
+
+.selection__button--reset:not(:disabled):active .button__text {
+  opacity: 30%;
 }
 
 .results {
