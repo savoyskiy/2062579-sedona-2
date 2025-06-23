@@ -733,6 +733,23 @@ html {
   background-repeat: no-repeat;
 }
 
+.view-list__link:hover {
+  border-color: #000000;
+}
+
+.view-list__link:focus-visible {
+  border-color: #68a2ca;
+  outline: none;
+}
+
+.view-list__link:active {
+  border-color: #000000;
+}
+
+.view-list__link--current {
+  border-color: #000000;
+}
+
 .view-list__table {
   background-image: url("../images/mode_table.svg");
 }
@@ -758,6 +775,20 @@ html {
   background-image: url("../images/select_check.svg");
   background-repeat: no-repeat;
   background-position: 258px center;
+}
+
+.sorting:hover {
+  border-color: #68a2ca;
+}
+
+.sorting:focus-visible {
+  border-color: #68a2ca;
+  outline: none;
+}
+
+.sorting:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .results__list {
