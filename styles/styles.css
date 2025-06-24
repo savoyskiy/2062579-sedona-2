@@ -487,7 +487,8 @@ html {
 }
 
 .newsletter__text {
-  margin: 0 0 54px 0;
+  width: 475px;
+  margin: 0 auto 54px;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -915,8 +916,8 @@ html {
 .hotel-card__type,
 .hotel-card__price {
   display: block;
-  min-height: 23px;
-  line-height: 23px;
+  min-height: 21px;
+  line-height: 21px;
   color: #333333;
 }
 
