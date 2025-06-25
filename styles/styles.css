@@ -843,6 +843,14 @@ html {
   cursor: pointer;
 }
 
+.selection__range-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.selection__range-button:active {
+  outline: 2px solid #83b3d3;
+}
+
 .selection__range-min {
   top: -8px;
 }
