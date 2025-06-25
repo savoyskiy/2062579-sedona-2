@@ -715,6 +715,46 @@ html {
   opacity: 30%;
 }
 
+.selection__radio {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.selection__radio::after {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f5e72;
+}
+
+.selection__real-radio:checked + .selection__radio::after {
+  display: block;
+}
+
+.selection__real-radio:hover + .selection__radio,
+.selection__real-radio:hover ~ .selection__text {
+  opacity: 60%;
+}
+
+.selection__real-radio:focus-visible + .selection__radio {
+  outline: 3px solid #83b3d3;
+}
+
+.selection__real-radio:active + .selection__radio,
+.selection__real-radio:active ~ .selection__text {
+  opacity: 30%;
+}
+
 .selection__text {
   line-height: 23px;
   color: #ffffff;

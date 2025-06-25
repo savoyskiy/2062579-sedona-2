@@ -101,16 +101,25 @@
 
               <ul class="selection__list">
                 <li class="selection__item">
-                  <label class="selection__text" for="hotel">Гостиница</label>
-                  <input class="selection__radio" type="radio" id="hotel"  name="hotel-type" value="hotel" checked>
+                  <label class="selection__label" for="hotel">
+                    <input class="visually-hidden selection__real-radio" type="radio" id="hotel"  name="hotel-type" value="hotel" checked>
+                    <span class="selection__radio"></span>
+                    <span class="selection__text">Гостиница</span>
+                  </label>
                 </li>
                 <li class="selection__item">
-                  <label class="selection__text" for="motel">Мотель</label>
-                  <input class="selection__radio" type="radio" id="motel" name="hotel-type" value="motel">
+                  <label class="selection__label" for="motel">
+                    <input class="visually-hidden selection__real-radio" type="radio" id="motel" name="hotel-type" value="motel">
+                    <span class="selection__radio"></span>
+                    <span class="selection__text">Мотель</span>
+                  </label>
                 </li>
                 <li class="selection__item">
-                  <label class="selection__text" for="apartment">Апартаменты</label>
-                  <input class="selection__radio" type="radio" id="apartment" name="hotel-type" value="apartment">
+                  <label class="selection__label" for="apartment">
+                    <input class="visually-hidden selection__real-radio" type="radio" id="apartment" name="hotel-type" value="apartment">
+                    <span class="selection__radio"></span>
+                    <span class="selection__text">Апартаменты</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
