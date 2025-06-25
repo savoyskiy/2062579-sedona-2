@@ -128,19 +128,30 @@
               <legend class="selection__name">Стоимость, ₽:</legend>
 
               <ul class="selection__list selection__price-inputs">
-                <li class="selection__item">
+                <li class="selection__item selection__price-item">
                   <label class="selection__text selection__price-label" for="min-price">
                     <input class="selection__price-input selection__min-price" type="text" inputmode="numeric" pattern="[0-9]*" required id="min-price" name="min-price" value="0">
                   </label>
                 </li>
-                <li class="selection__item">
+                <li class="selection__item selection__price-item">
                   <label class="selection__text selection__price-label" for="max-price">
                     <input class="selection__price-input selection__max-price" type="text" inputmode="numeric" pattern="[0-9]*" required id="max-price" name="max-price" value="9000">
                   </label>
                 </li>
               </ul>
 
-              <div class="selection__price-slider"></div><!--тут будет слайдер-->
+              <div class="selection__price-slider">
+                <div class="selection__range-scale">
+                  <div class="selection__range-bar">
+                    <button class="selection__range-button selection__range-min">
+                      <span class="visually-hidden">Установить минимальную цену</span>
+                    </button>
+                    <button class="selection__range-button selection__range-max">
+                      <span class="visually-hidden">Установить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
             </fieldset>
 
