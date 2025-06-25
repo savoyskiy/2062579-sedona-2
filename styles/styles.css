@@ -665,6 +665,7 @@ html {
 
 .selection__price-inputs {
   display: flex;
+  flex-wrap: wrap;
   gap: 2px;
   margin-bottom: 44px;
 }
@@ -773,6 +774,10 @@ html {
 .selection__real-checkbox:active + .selection__checkbox,
 .selection__real-checkbox:active ~ .selection__text {
   opacity: 30%;
+}
+
+.selection__text {
+  max-width: 105px;
 }
 
 .selection__radio {
