@@ -649,6 +649,39 @@ html {
   width: 288px;
 }
 
+.selection__price-inputs {
+  display: flex;
+  gap: 2px;
+}
+
+.selection__price-input {
+  width: 67px;
+  margin: 0;
+  padding: 12px 56px 12px 20px;
+  border: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+}
+
+.selection__price-input:hover {
+  background-color: #e6e6e6;
+}
+
+.selection__price-input:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.selection__min-price {
+  border-radius: 4px 0 0 4px;
+}
+
+.selection__max-price {
+  border-radius: 0 4px 4px 0;
+}
+
 .selection__list {
   margin: 0;
   padding: 0;

@@ -127,15 +127,15 @@
             <fieldset class="selection__type price">
               <legend class="selection__name">Стоимость, ₽:</legend>
 
-              <ul class="selection__list">
+              <ul class="selection__list selection__price-inputs">
                 <li class="selection__item">
-                  <label class="selection__text" for="min-price">
-                    <input class="selection__min-price" type="number" id="min-price" name="min-price" value="0">
+                  <label class="selection__text selection__price-label" for="min-price">
+                    <input class="selection__price-input selection__min-price" type="text" inputmode="numeric" pattern="[0-9]*" required id="min-price" name="min-price" value="0">
                   </label>
                 </li>
                 <li class="selection__item">
-                  <label class="selection__text" for="max-price">
-                    <input class="selection__max-price" type="number" id="max-price" name="max-price" value="9000">
+                  <label class="selection__text selection__price-label" for="max-price">
+                    <input class="selection__price-input selection__max-price" type="text" inputmode="numeric" pattern="[0-9]*" required id="max-price" name="max-price" value="9000">
                   </label>
                 </li>
               </ul>
