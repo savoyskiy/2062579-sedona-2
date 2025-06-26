@@ -59,6 +59,19 @@ html {
   line-height: 26px;
 }
 
+.title-form-main {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.text-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .button {
   font-family: inherit;
   font-weight: 700;
@@ -1420,7 +1433,6 @@ html {
   position: relative;
   margin: auto;
   width: 577px;
-  min-height: 448px;
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -1449,6 +1461,7 @@ html {
   display: grid;
   grid-template-columns: 137px 110px 87px 137px 110px;
   grid-template-rows: min-content min-content min-content min-content min-content 48px min-content;
+  align-items: center;
 }
 
 .check-in-date-label {
@@ -1471,6 +1484,14 @@ html {
   grid-row: 3 / 4;
 }
 
+.check-in-date-input,
+.check-out-date-input {
+  padding: 12px 54px 12px 20px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+}
+
 .adults-number-label {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
@@ -1489,6 +1510,16 @@ html {
 .children-number-input {
   grid-column: 5 / 6;
   grid-row: 5 / 6;
+}
+
+.adults-number-input,
+.children-number-input {
+  padding: 14px 40px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
 }
 
 .search-form__button {
@@ -1511,4 +1542,18 @@ html {
 .check-out-date-text {
   grid-column: 2 / -1;
   grid-row: 4 / 5;
+}
+
+.search-form__result-text {
+  min-height: 40px;
+  margin: 0;
+  padding: 4px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.date-error-text {
+  color: #ff5757;
 }
