@@ -1439,8 +1439,9 @@ html {
 }
 
 .modal__close-button {
-  position: absolute;
-  right: 52px;
+  position: relative;
+  top: -44px;
+  right: -544px;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
@@ -1453,7 +1454,7 @@ html {
 }
 
 .modal__heading {
-  margin: 0 0 64px 0;
+  margin: 0 0 10px 0;
   padding-right: 64px;
 }
 
@@ -1469,7 +1470,8 @@ html {
   grid-row: 1 / 2;
 }
 
-.check-in-date-input {
+.check-in-date-input-wrapper {
+  position: relative;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
 }
@@ -1479,13 +1481,24 @@ html {
   grid-row: 3 / 4;
 }
 
-.check-out-date-input {
+.check-out-date-input-wrapper {
+  position: relative;
   grid-column: 2 / -1;
   grid-row: 3 / 4;
 }
 
+.check-in-date-input-wrapper::after,
+.check-out-date-input-wrapper::after {
+  content: url("../images/calendar.svg");
+  position: absolute;
+  top: 14px;
+  right: 25px;
+  opacity: 30%;
+}
+
 .check-in-date-input,
 .check-out-date-input {
+  width: 366px;
   padding: 12px 54px 12px 20px;
   background-color: #f2f2f2;
   border: none;
@@ -1503,8 +1516,11 @@ html {
 }
 
 .children-number-label {
+  display: flex;
   grid-column: 4 / 5;
   grid-row: 5 / 6;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .children-number-input {
@@ -1556,4 +1572,15 @@ html {
 
 .date-error-text {
   color: #ff5757;
+}
+
+.tooltip__button {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
