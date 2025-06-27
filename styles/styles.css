@@ -1666,6 +1666,10 @@ html {
   color: #ff5757;
 }
 
+.tooltip {
+  position: relative;
+}
+
 .tooltip__button {
   display: grid;
   place-items: center;
@@ -1675,4 +1679,36 @@ html {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.tooltip__button:focus-visible {
+  outline: none;
+}
+
+.tooltip__text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 216px;
+  margin-top: 15px;
+  padding: 15px 18px 18px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+}
+
+.tooltip__text::before {
+  content: url("../images/tooltip-triangle.svg");
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip__button:hover + .tooltip__text,
+.tooltip__button:focus + .tooltip__text {
+  display: block;
 }
