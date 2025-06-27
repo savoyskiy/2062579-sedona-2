@@ -1520,6 +1520,10 @@ html {
   border-radius: 4px;
 }
 
+.search-form__input:placeholder-shown {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .search-form__input:hover {
   background-color: #e5e5e5;
 }
