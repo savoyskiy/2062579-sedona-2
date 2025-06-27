@@ -1442,15 +1442,27 @@ html {
   position: relative;
   top: -44px;
   right: -544px;
+  display: grid;
+  place-items: center;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
-  background-image: url("../images/modal-close.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal__close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal__close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal__close-button:active .modal__close-button-image {
+  opacity: 30%;
 }
 
 .modal__heading {
@@ -1555,21 +1567,33 @@ html {
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 30%;
+  cursor: pointer;
 }
 
 .adults-plus-button,
 .children-plus-button {
   background-image: url("../images/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 30%;
 }
 
 .adults-minus-button,
 .children-minus-button {
   background-image: url("../images/minus.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+}
+
+.number-input-button:hover {
+  opacity: 100%;
+}
+
+.number-input-button:focus-visible {
+  opacity: 100%;
+  outline: 3px solid #82b3d3;
+  z-index: 1;
+}
+
+.number-input-button:active {
   opacity: 30%;
 }
 
@@ -1583,6 +1607,23 @@ html {
   background-color: #83B3D3;
   border: none;
   border-radius: 10px;
+}
+
+.search-form__button:hover {
+  background-color: #68a2ca;
+}
+
+.search-form__button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.search-form__button:active {
+  background-color: #68a2ca;
+}
+
+.search-form__button:active .button__text{
+  opacity: 30%;
 }
 
 .check-in-date-text {
