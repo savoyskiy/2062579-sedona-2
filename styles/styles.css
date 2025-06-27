@@ -1431,6 +1431,8 @@ html {
 
 .modal__search {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   width: 577px;
   padding: 64px 70px;
@@ -1440,12 +1442,12 @@ html {
 
 .modal__close-button {
   position: relative;
-  top: -44px;
-  right: -544px;
   display: grid;
+  right: -18px;
   place-items: center;
   width: 52px;
   height: 52px;
+  margin: 0 0 48px 0;
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
@@ -1466,8 +1468,9 @@ html {
 }
 
 .modal__heading {
-  margin: 0 0 10px 0;
-  padding-right: 64px;
+  max-width: 500px;
+  margin: 0 auto 64px 0;
+  padding-right: 24px;
 }
 
 .search-form {
@@ -1515,6 +1518,15 @@ html {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+}
+
+.search-form__input:hover {
+  background-color: #e5e5e5;
+}
+
+.search-form__input:focus-visible {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
 }
 
 .adults-number-label {
