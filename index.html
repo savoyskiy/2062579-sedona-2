@@ -212,7 +212,15 @@
         <p class="search-form__result-text check-out-date-text date-confirmation-text">На эти даты есть свободные номера. Пока есть.</p>
 
         <label class="search-form__label adults-number-label title-form-main" for="adults">Взрослые:</label>
-        <input class="search-form__input adults-number-input text-input" type="text" id="adults" value="2">
+        <span class="adults-number-input-wrapper">
+          <button class="number-input-button adults-minus-button" type="button">
+            <span class="visually-hidden">Уменьшить значение</span>
+          </button>
+          <input class="search-form__input adults-number-input text-input" type="text" id="adults" value="2">
+          <button class="number-input-button adults-plus-button" type="button">
+            <span class="visually-hidden">Увеличить значение</span>
+          </button>
+        </span>
 
         <span class="children-number-label">
           <label class="search-form__label children-number-label title-form-main" for="children">Дети:</label>
@@ -225,7 +233,15 @@
             <span class="tooltip__text"></span>
           </span>
         </span>
-        <input class="search-form__input children-number-input text-input" type="text" id="children" value="2">
+        <span class="children-number-input-wrapper">
+          <button class="number-input-button children-minus-button" type="button">
+            <span class="visually-hidden">Уменьшить значение</span>
+          </button>
+          <input class="search-form__input children-number-input text-input" type="text" id="children" value="2">
+          <button class="number-input-button children-plus-button" type="button">
+            <span class="visually-hidden">Увеличить значение</span>
+          </button>
+        </span>
 
         <button class="button search-form__button" type="submit">
           <span class="button__text">Найти</span>
