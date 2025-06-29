@@ -687,21 +687,13 @@ html {
   position: relative;
 }
 
-.selection__price-label::after {
+.selection__price-input-text {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
   color: #000000;
   opacity: 30%;
-}
-
-.selection__price-label[for="min-price"]::after {
-  content: "от";
-}
-
-.selection__price-label[for="max-price"]::after {
-  content: "до";
 }
 
 .selection__price-input {
@@ -1022,6 +1014,7 @@ html {
   background-image: url("../images/select_check.svg");
   background-repeat: no-repeat;
   background-position: 258px center;
+  cursor: pointer;
 }
 
 .sorting:hover {
@@ -1039,12 +1032,22 @@ html {
 }
 
 .results__list {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin: 0 0 80px 0;
   padding: 0;
   list-style-type: none;
+}
+
+.results__list::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 
 .hotel-card {
@@ -1692,23 +1695,30 @@ html {
   display: none;
   width: 216px;
   margin-top: 15px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 22px 22px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   background-color: #333333;
   border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .tooltip__text::before {
-  content: url("../images/tooltip-triangle.svg");
+  content: "";
   position: absolute;
-  top: -15px;
+  top: -8px;
   left: 50%;
   transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #333333;
 }
 
 .tooltip__button:hover + .tooltip__text,
-.tooltip__button:focus + .tooltip__text {
+.tooltip__button:focus + .tooltip__text,
+.tooltip__text--open {
   display: block;
 }
