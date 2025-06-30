@@ -192,7 +192,7 @@
   </div>
 
   <!--модальное окно-->
-  <div class="modal-container modal-container--open"> <!--Добавление класса  modal-container--open  показывает модальное окно-->
+  <div class="modal-container modal-container--open"> <!--Добавление класса modal-container--open показывает модальное окно-->
     <div class="modal modal__search">
       <h2 class="modal__heading title-major">Поиск гостиницы в Седоне</h2>
       <button class="modal__close-button" type="button">
@@ -204,13 +204,17 @@
         <span class="check-in-date-input-wrapper">
           <input class="search-form__input check-in-date-input text-input" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату" value="27 апреля 2020" required>
         </span>
-        <p class="search-form__result-text check-in-date-text date-error-text">Мы не можем отправить вас в прошлое.</p>
+        <p class="search-form__result-text check-in-date-text">
+          <span class="search-form__result-text-value search-form__result-text-value--open date-error-text">Мы не можем отправить вас в прошлое.</span>
+        </p>
 
         <label class="search-form__label check-out-date-label title-form-main" for="check-out-date">Дата выезда:</label>
         <span class="check-out-date-input-wrapper">
           <input class="search-form__input check-out-date-input text-input" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату" value="1 сентября 2023" required>
         </span>
-        <p class="search-form__result-text check-out-date-text date-confirmation-text">На эти даты есть свободные номера. Пока есть.</p>
+        <p class="search-form__result-text check-out-date-text">
+          <span class="search-form__result-text-value search-form__result-text-value--open date-confirmation-text">На эти даты есть свободные номера. Пока есть.</span>
+        </p>
 
         <label class="search-form__label adults-number-label title-form-main" for="adults">Взрослые:</label>
         <span class="adults-number-input-wrapper">
@@ -231,7 +235,7 @@
                 <path fill="#fff" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" clip-rule="evenodd" />
               </svg>
             </button>
-            <!--добавление класса  tooltip__text--open  показывает тултип (класс для работы кнопки) -->
+            <!--добавление класса tooltip__text--open показывает тултип (класс для работы кнопки) -->
             <span class="tooltip__text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
           </span>
         </span>
@@ -239,7 +243,7 @@
           <button class="number-input-button children-minus-button" type="button">
             <span class="visually-hidden">Уменьшить значение</span>
           </button>
-          <input class="search-form__input children-number-input text-input" type="text"inputmode="numeric" pattern="[0-9]*" id="children" name="children" placeholder="2" value="2">
+          <input class="search-form__input children-number-input text-input" type="text" inputmode="numeric" pattern="[0-9]*" id="children" name="children" placeholder="2" value="2">
           <button class="number-input-button children-plus-button" type="button">
             <span class="visually-hidden">Увеличить значение</span>
           </button>

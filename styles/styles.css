@@ -1665,6 +1665,14 @@ html {
   color: #333333;
 }
 
+.search-form__result-text-value {
+  display: none;
+}
+
+.search-form__result-text-value--open {
+  display: block;
+}
+
 .date-error-text {
   color: #ff5757;
 }
