@@ -1526,6 +1526,10 @@ html {
   border-radius: 4px;
 }
 
+.search-form__input {
+  font-family: inherit;
+}
+
 .search-form__input:placeholder-shown {
   color: rgba(0, 0, 0, 0.6);
 }
