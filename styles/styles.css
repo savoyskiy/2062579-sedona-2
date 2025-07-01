@@ -258,7 +258,7 @@ html {
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/about_mask.svg"), url("../images/about_background.jpg");
   background-repeat: no-repeat;
-  background-position: bottom left, top left;
+  background-position: bottom center, top center;
 }
 
 .about__image {
@@ -520,6 +520,7 @@ html {
 .newsletter__email {
   width: 412px;
   padding: 14px 20px;
+  font-family: inherit;
   font-size: inherit;
   line-height: 24px;
   background-color: #f2f2f2;
@@ -701,6 +702,7 @@ html {
   margin: 0;
   padding: 12px 56px 12px 20px;
   border: 0;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1005,6 +1007,7 @@ html {
   width: 292px;
   margin-right: 70px;
   padding: 12px 50px 12px 18px;
+  font-family: inherit;
   font-size: inherit;
   line-height: 21px;
   border: 2px solid #e5e5e5;
