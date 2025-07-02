@@ -1620,12 +1620,14 @@ html {
   outline: none;
 }
 
-.search-form__button:active {
+.search-form__button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #68a2ca;
 }
 
-.search-form__button:active .button__text{
-  opacity: 30%;
+.search-form__button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .check-in-date-text {
