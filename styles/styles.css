@@ -227,12 +227,9 @@ html {
   outline: none;
 }
 
-.navigation__button:active {
+.navigation__button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
-}
-
-.navigation__button:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .navigation__button:disabled {
@@ -471,12 +468,9 @@ html {
   outline: none;
 }
 
-.search__button:active {
+.search__button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
-}
-
-.search__button:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .search__button:disabled {
@@ -560,12 +554,9 @@ html {
   outline: none;
 }
 
-.newsletter__button:active {
+.newsletter__button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
-}
-
-.newsletter__button:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .newsletter__button:disabled {
@@ -902,12 +893,9 @@ html {
   outline: none;
 }
 
-.selection__button--submit:active {
+.selection__button--submit:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
-}
-
-.selection__button--submit:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .selection__button--submit:disabled {
@@ -929,8 +917,8 @@ html {
   outline-offset: -3px;
 }
 
-.selection__button--reset:not(:disabled):active .button__text {
-  opacity: 30%;
+.selection__button--reset:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .results {
@@ -1163,11 +1151,8 @@ html {
 }
 
 .hotel-card__link:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
-}
-
-.hotel-card__link:active .button__text {
-  opacity: 30%;
 }
 
 .hotel-card__like-button {
@@ -1190,12 +1175,9 @@ html {
   outline: none;
 }
 
-.hotel-card__like-button:active {
+.hotel-card__like-button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
-}
-
-.hotel-card__like-button:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .hotel-card__like-button:disabled {
@@ -1216,12 +1198,9 @@ html {
   outline: none;
 }
 
-.hotel-card__like-button--true:active {
+.hotel-card__like-button--true:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #7db54f;
-}
-
-.hotel-card__like-button--true:not(:disabled):active .button__text {
-  opacity: 30%;
 }
 
 .hotel-card__like-button--true:disabled {
@@ -1310,11 +1289,8 @@ html {
 }
 
 .pagination__link[href]:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
-}
-
-.pagination__link[href]:active .pagination__number {
-  opacity: 30%;
 }
 
 .newsletter--hotels {
