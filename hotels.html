@@ -338,5 +338,68 @@
       </a>
     </footer>
   </div>
+
+  <!--модальное окно-->
+  <div class="modal-container"> <!--Добавление класса modal-container--open показывает модальное окно-->
+    <div class="modal modal__search">
+      <h2 class="modal__heading title-major">Поиск гостиницы в Седоне</h2>
+      <button class="modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="modal__close-button-image" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15"><path fill="#000" d="M14.5 1.8 13.2.5 7.5 6.2 1.8.5.5 1.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z"/></svg>
+      </button>
+      <form class="modal__form search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="search-form__label check-in-date-label title-form-main" for="check-in-date">Дата заезда:</label>
+        <span class="check-in-date-input-wrapper">
+          <input class="search-form__input check-in-date-input text-input" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату" value="27 апреля 2020" required>
+        </span>
+        <p class="search-form__result-text check-in-date-text">
+          <span class="search-form__result-text-value search-form__result-text-value--open date-error-text">Мы не можем отправить вас в прошлое.</span>
+        </p>
+
+        <label class="search-form__label check-out-date-label title-form-main" for="check-out-date">Дата выезда:</label>
+        <span class="check-out-date-input-wrapper">
+          <input class="search-form__input check-out-date-input text-input" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату" value="1 сентября 2023" required>
+        </span>
+        <p class="search-form__result-text check-out-date-text">
+          <span class="search-form__result-text-value search-form__result-text-value--open date-confirmation-text">На эти даты есть свободные номера. Пока есть.</span>
+        </p>
+
+        <label class="search-form__label adults-number-label title-form-main" for="adults">Взрослые:</label>
+        <span class="adults-number-input-wrapper">
+          <button class="number-input-button adults-minus-button" type="button">
+            <span class="visually-hidden">Уменьшить значение</span>
+          </button>
+          <input class="search-form__input adults-number-input text-input" type="text" inputmode="numeric" pattern="[0-9]*" id="adults" name="adults" placeholder="2" value="2" required>
+          <button class="number-input-button adults-plus-button" type="button">
+            <span class="visually-hidden">Увеличить значение</span>
+          </button>
+        </span>
+
+        <span class="children-number-label">
+          <label class="search-form__label children-number-label title-form-main" for="children">Дети:</label>
+          <span class="tooltip">
+            <button class="tooltip__button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2" height="12" fill="none" viewBox="0 0 2 12">
+                <path fill="#fff" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <!--добавление класса tooltip__text--open показывает тултип (класс для работы кнопки) -->
+            <span class="tooltip__text tooltip__text--open">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+          </span>
+        </span>
+        <span class="children-number-input-wrapper">
+          <button class="number-input-button children-minus-button" type="button">
+            <span class="visually-hidden">Уменьшить значение</span>
+          </button>
+          <input class="search-form__input children-number-input text-input" type="text" inputmode="numeric" pattern="[0-9]*" id="children" name="children" placeholder="2" value="2">
+          <button class="number-input-button children-plus-button" type="button">
+            <span class="visually-hidden">Увеличить значение</span>
+          </button>
+        </span>
+
+        <button class="button search-form__button" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
