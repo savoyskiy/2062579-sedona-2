@@ -1411,7 +1411,7 @@ html {
   display: grid;
 }
 
-.modal__search {
+.modal {
   position: relative;
   display: flex;
   flex-wrap: wrap;
