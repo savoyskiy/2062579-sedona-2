@@ -536,6 +536,14 @@ html {
   background-color: #f2f2f2;
 }
 
+.newsletter__email:disabled {
+  background-color: #e6e6e6;
+}
+
+.newsletter__email:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .newsletter__button {
   padding: 8px 50px;
   font-size: 20px;
@@ -709,6 +717,15 @@ html {
   outline: 3px solid #83b3d3;
 }
 
+.selection__price-input:disabled {
+  background-color: #e6e6e6;
+  opacity: 80%;
+}
+
+.selection__price-input:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .selection__min-price {
   border-radius: 4px 0 0 4px;
 }
@@ -818,6 +835,13 @@ html {
   opacity: 30%;
 }
 
+.selection__real-radio:disabled + .selection__radio,
+.selection__real-radio:disabled ~ .selection__text,
+.selection__real-checkbox:disabled + .selection__checkbox,
+.selection__real-checkbox:disabled ~ .selection__text {
+  opacity: 60%;
+}
+
 .selection__text {
   line-height: 23px;
   color: #ffffff;
@@ -850,8 +874,13 @@ html {
   outline: 3px solid #83b3d3;
 }
 
-.selection__range-button:active {
+.selection__range-button:not(:disabled):active {
   outline: 2px solid #83b3d3;
+}
+
+.selection__range-button:disabled {
+  background-color: #585858;
+  cursor: auto;
 }
 
 .selection__range-min {
