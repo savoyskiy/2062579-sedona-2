@@ -485,6 +485,7 @@ html {
   background-color: rgba(131, 179, 211, 0.7);
   background-image: url("../images/newsletter_background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .newsletter__heading {
@@ -739,7 +740,7 @@ html {
 }
 
 .hotel-type {
-  margin-right: 140px;
+  margin-right: 141px;
 }
 
 .selection__name {
@@ -898,6 +899,12 @@ html {
   border: none;
 }
 
+.selection__list-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .selection__button {
   width: 100%;
   margin: 0;
@@ -909,7 +916,6 @@ html {
 }
 
 .selection__button--submit {
-  margin-bottom: 32px;
   background-color: #82b3d3;
 }
 
