@@ -194,8 +194,8 @@ html {
 
 .user-navigation__like-number {
   position: absolute;
-  top: 12px;
-  left: 21px;
+  top: 11px;
+  left: 20px;
   display: grid;
   place-items: center;
   width: 20px;
@@ -265,7 +265,7 @@ html {
 
 .about__heading {
   display: block;
-  max-width: 620px;
+  max-width: 630px;
   min-height: 72px;
   margin: 0 auto 25px;
   text-align: center;
@@ -273,7 +273,7 @@ html {
 
 .about__description {
   display: block;
-  max-width: 651px;
+  max-width: 655px;
   min-height: 26px;
   margin: 0 auto 90px;
   font-size: 22px;
@@ -495,7 +495,7 @@ html {
 
 .newsletter__text {
   width: 475px;
-  margin: 0 auto 54px;
+  margin: 0 auto 55px;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -1518,7 +1518,7 @@ html {
   content: url("../images/calendar.svg");
   position: absolute;
   top: 14px;
-  right: 25px;
+  right: 23px;
   opacity: 30%;
 }
 
