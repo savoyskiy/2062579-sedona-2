@@ -1593,8 +1593,11 @@ html {
 
 .number-input-button {
   align-self: center;
+  display: grid;
+  place-items: center;
   width: 20px;
   height: 20px;
+  padding: 0;
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
@@ -1602,16 +1605,6 @@ html {
   background-position: center center;
   opacity: 30%;
   cursor: pointer;
-}
-
-.adults-plus-button,
-.children-plus-button {
-  background-image: url("../images/plus.svg");
-}
-
-.adults-minus-button,
-.children-minus-button {
-  background-image: url("../images/minus.svg");
 }
 
 .number-input-button:hover {
@@ -1716,6 +1709,7 @@ html {
   transform: translateX(-50%);
   display: none;
   width: 216px;
+  min-height: 100px;
   margin-top: 15px;
   padding: 20px 18px 22px 22px;
   font-size: 16px;
