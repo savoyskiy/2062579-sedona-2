@@ -698,15 +698,23 @@ html {
   margin-bottom: 44px;
 }
 
+.selection__price-item {
+  display: block;
+  width: 143px;
+}
+
 .selection__price-label {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .selection__price-input-text {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: -19px;
   color: #000000;
   opacity: 30%;
 }
