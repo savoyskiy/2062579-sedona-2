@@ -301,6 +301,8 @@ html {
 }
 
 .advantages__name {
+  display: block;
+  min-height: 56px;
   margin: 0 0 62px 0;
   text-align: center;
 }
@@ -419,6 +421,8 @@ html {
 }
 
 .recommendation__name {
+  display: block;
+  min-height: 28px;
   margin: 0 0 30px 0;
   text-align: center;
 }
@@ -436,11 +440,15 @@ html {
 }
 
 .search__name {
+  display: block;
+  min-height: 36px;
   margin: 0 0 20px 0;
   text-align: center;
 }
 
 .search__text {
+  display: block;
+  min-height: 52px;
   margin: 0 0 54px 0;
   font-size: 22px;
   line-height: 26px;
@@ -489,13 +497,17 @@ html {
 }
 
 .newsletter__heading {
+  display: block;
+  min-height: 36px;
   margin: 0 0 20px 0;
   color: #ffffff;
   text-align: center;
 }
 
 .newsletter__text {
+  display: block;
   width: 475px;
+  min-height: 52px;
   margin: 0 auto 55px;
   font-size: 22px;
   line-height: 26px;
