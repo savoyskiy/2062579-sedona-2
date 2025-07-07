@@ -27,6 +27,7 @@ html {
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+  word-break: break-all;
 }
 
 .page-container {
