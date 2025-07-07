@@ -148,6 +148,7 @@ html {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+  border-radius: 3px;
 }
 
 .navigation__link[href]:hover,
@@ -156,10 +157,13 @@ html {
   fill: #756257;
 }
 
-.navigation__link[href]:focus-visible,
+.navigation__link[href]:focus-visible {
+  color: #756257;
+  outline: 3px solid #756257;
+  fill: #756257;
+}
 .navigation__link[href]:focus-visible path {
   color: #756257;
-  outline: none;
   fill: #756257;
 }
 
@@ -636,6 +640,7 @@ html {
 .breadcrumbs__link {
   color: #ffffff;
   text-decoration: none;
+  border-radius: 2px;
 }
 
 .breadcrumbs__link[href]:hover {
@@ -644,7 +649,7 @@ html {
 
 .breadcrumbs__link:focus-visible {
   opacity: 100%;
-  outline: none;
+  outline: 3px solid #83b3d3;
 }
 
 .breadcrumbs__link[href]:active {
@@ -1386,6 +1391,7 @@ html {
   place-items: center;
   height: 100%;
   height: 40px;
+  border-radius: 4px;
 }
 
 .socials__link:hover path {
@@ -1397,7 +1403,7 @@ html {
 }
 
 .socials__link:focus-visible {
-  outline: none;
+  outline: 3px solid #83b3d3;
 }
 
 .socials__link:active path {
