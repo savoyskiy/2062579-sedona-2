@@ -983,6 +983,11 @@ html {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.selection__button--reset:disabled {
+  opacity: 10%;
+  cursor: auto;
+}
+
 .results {
   display: flex;
   flex-wrap: wrap;
