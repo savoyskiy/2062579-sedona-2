@@ -219,12 +219,14 @@ html {
 }
 
 .navigation__button {
-  width: 160px;
+  display: block;
+  width: 92px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
   border-width: 0;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .navigation__button:hover {
