@@ -229,14 +229,13 @@
         <span class="children-number-label">
           <label class="search-form__label children-number-label title-form-main" for="children">Дети:</label>
           <span class="tooltip">
-            <button class="tooltip__button" type="button">
+            <button class="tooltip__button" type="button" aria-labelledby="tooltip__text">
               <svg xmlns="http://www.w3.org/2000/svg" width="2" height="12" fill="none" viewBox="0 0 2 12">
                 <path fill="#fff" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" clip-rule="evenodd" />
               </svg>
-              <span class="visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </button>
             <!--добавление класса tooltip__text--open показывает тултип (класс для работы кнопки) -->
-            <span class="tooltip__text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            <span class="tooltip__text" role="tooltip" id="tooltip__text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
           </span>
         </span>
         <span class="children-number-input-wrapper">
