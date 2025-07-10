@@ -958,17 +958,17 @@ html {
 }
 
 .selection__button--submit:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .selection__button--submit:focus-visible {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
   outline: none;
 }
 
 .selection__button--submit:not(:disabled):active {
   color: rgba(255, 255, 255, 0.3);
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .selection__button--submit:disabled {
@@ -1287,8 +1287,6 @@ html {
 }
 
 .hotel-card__stars {
-  display: flex;
-  gap: 6px;
   width: 140px;
   padding: 10px 0;
   background-image: url("../images/star.svg");
