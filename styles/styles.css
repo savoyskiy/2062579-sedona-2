@@ -801,7 +801,15 @@ html {
   appearance: none;
 }
 
-.selection__real-checkbox:checked {
+.selection__real-checkbox::after {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  display: none;
+  content: url("../images/checkbox-check.svg");
+}
+
+.selection__real-checkbox:checked::after {
   display: block;
 }
 
