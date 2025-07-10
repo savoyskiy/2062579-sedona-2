@@ -791,7 +791,7 @@ html {
   align-items: center;
 }
 
-.selection__real-checkbox {
+.selection__checkbox {
   display: block;
   width: 20px;
   height: 20px;
@@ -801,7 +801,7 @@ html {
   appearance: none;
 }
 
-.selection__real-checkbox::after {
+.selection__checkbox::after {
   position: relative;
   top: 4px;
   left: 4px;
@@ -809,22 +809,22 @@ html {
   content: url("../images/checkbox-check.svg");
 }
 
-.selection__real-checkbox:checked::after {
+.selection__checkbox:checked::after {
   display: block;
 }
 
-.selection__real-checkbox:hover,
-.selection__real-checkbox:hover ~ .selection__text {
+.selection__checkbox:hover,
+.selection__checkbox:hover ~ .selection__text {
   opacity: 60%;
 }
 
-.selection__real-checkbox:focus-visible {
+.selection__checkbox:focus-visible {
   outline: 3px solid #83b3d3;
   outline-offset: 0;
 }
 
-.selection__real-checkbox:active,
-.selection__real-checkbox:active ~ .selection__text {
+.selection__checkbox:active,
+.selection__checkbox:active ~ .selection__text {
   opacity: 30%;
 }
 
@@ -832,16 +832,17 @@ html {
   max-width: 105px;
 }
 
-.selection__radio {
+.selection__real-radio {
   display: block;
   width: 20px;
   height: 20px;
-  margin-right: 16px;
+  margin: 0 16px 0 0;
   border-radius: 50%;
   background-color: #ffffff;
+  appearance: none;
 }
 
-.selection__radio::after {
+.selection__real-radio::after {
   position: relative;
   top: 50%;
   left: 50%;
@@ -854,28 +855,29 @@ html {
   background-color: #3f5e72;
 }
 
-.selection__real-radio:checked + .selection__radio::after {
+.selection__real-radio:checked::after {
   display: block;
 }
 
-.selection__real-radio:hover + .selection__radio,
+.selection__real-radio:hover,
 .selection__real-radio:hover ~ .selection__text {
   opacity: 60%;
 }
 
-.selection__real-radio:focus-visible + .selection__radio {
+.selection__real-radio:focus-visible {
   outline: 3px solid #83b3d3;
+  outline-offset: 0;
 }
 
-.selection__real-radio:active + .selection__radio,
+.selection__real-radio:active,
 .selection__real-radio:active ~ .selection__text {
   opacity: 30%;
 }
 
-.selection__real-radio:disabled + .selection__radio,
+.selection__real-radio:disabled,
 .selection__real-radio:disabled ~ .selection__text,
-.selection__real-checkbox:disabled,
-.selection__real-checkbox:disabled ~ .selection__text {
+.selection__checkbox:disabled,
+.selection__checkbox:disabled ~ .selection__text {
   opacity: 60%;
 }
 
