@@ -806,7 +806,7 @@ html {
   top: 4px;
   left: 4px;
   display: none;
-  content: url("../images/checkbox-check.svg");
+  content: url("../images/checkbox_check.svg");
 }
 
 .selection__checkbox:checked::after {
