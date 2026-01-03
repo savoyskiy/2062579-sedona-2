@@ -1805,7 +1805,13 @@ html {
 .modal-result__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  gap: 20px;
+  max-width: 300px;
+  padding: 45px 30px 30px;
+}
+
+.modal-result__text {
+  margin: 0;
 }
 
 .modal-result__button {

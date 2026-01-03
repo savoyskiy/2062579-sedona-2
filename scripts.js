@@ -31,7 +31,7 @@ tooltipButton.addEventListener('click', () => {
   tooltipText.classList.toggle('tooltip__text--open');
 });
 
-/* взаимодействие с сервером и отправка формы */
+/* взаимодействие с сервером и отправка формы поиска гостиниц */
 const SERVER_ADDRESS = 'https://echo.htmlacademy.ru/';
 
 const modalForm = document.querySelector('.search-form');
@@ -58,6 +58,14 @@ const undisableModalFormButton = () => {
   modalFormButton.textContent = 'Найти'
 };
 
+const onClickBackdrop = (evt) => {
+  const isOnBackdropClick = evt.target === evt.currentTarget;
+
+  if (isOnBackdropClick) {
+    modalResult.close();
+  }
+};
+
 const setFormData = (event) => {
   event.preventDefault();
   const formData = new FormData(event.target); // собираем данные из формы
@@ -74,7 +82,7 @@ const setFormData = (event) => {
   )
   .catch(
     () => {
-      modalResultText.textContent = 'Что-то пошло не так... Попробуйте еще раз'
+      modalResultText.textContent = 'Что-то пошло не так... Попробуйте еще раз';
     }
   )
   .finally(
@@ -85,7 +93,52 @@ const setFormData = (event) => {
   )
 };
 
+modalResult.addEventListener('click', onClickBackdrop);
 modalResultButton.addEventListener('click', () => {
   modalResult.close();
 })
 modalForm.addEventListener('submit', setFormData);
+
+/* отправка формы подписки */
+const newsletterForm = document.querySelector('.newsletter__form');
+const newsletterFormButton = newsletterForm.querySelector('.newsletter__button');
+
+const disableNewsletterFormButton = () => {
+  newsletterFormButton.disabled = true;
+  newsletterFormButton.textContent = 'Подписываем...';
+};
+
+const undisableNewsletterFormButton = () => {
+  newsletterFormButton.disabled = false;
+  newsletterFormButton.textContent = 'Подписаться';
+};
+
+const onSubmitNewsletterForm = (evt) => {
+  evt.preventDefault();
+  disableNewsletterFormButton();
+  const formData = new FormData(evt.target);
+
+  uploadFormDataServer(formData)
+  .then(
+    (responce) => {
+      if (!responce.ok) {
+        throw new Error;
+      }
+      newsletterForm.reset();
+      modalResultText.textContent = 'Спасибо за подписку!';
+    }
+  )
+  .catch(
+    () => {
+      modalResultText.textContent = 'Что-то пошло не так... уже работаем над этим. Попробуйте еще раз позже';
+    }
+  )
+  .finally(
+    () => {
+      modalResult.showModal();
+      undisableNewsletterFormButton();
+    }
+  )
+};
+
+newsletterForm.addEventListener('submit', onSubmitNewsletterForm);
