@@ -1403,7 +1403,6 @@ html {
 .socials__link {
   display: grid;
   place-items: center;
-  height: 100%;
   height: 40px;
   border-radius: 4px;
 }
@@ -1794,4 +1793,27 @@ html {
 .tooltip__button:focus + .tooltip__text,
 .tooltip__text--open {
   display: block;
+}
+
+.modal-result {
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-result__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.modal-result__button {
+  align-self: center;
+  padding: 8px 34px;
+  border-width: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
 }

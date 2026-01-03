@@ -1,0 +1,91 @@
+/* открытие/закрытие модального окна */
+let modalCloseButton = document.querySelector('.modal__close-button');
+let modalContainer = document.querySelector('.modal-container');
+
+/* открытие модального окна кнопкой "Поиск гостиницы в Седоне" на index */
+let searchButton = document.querySelector('.search__button');
+if (searchButton) {
+  searchButton.addEventListener('click', () => {
+    modalContainer.classList.remove('modal-container--hidden');
+  });
+}
+/* закрытие модального окна кнопкой-крестиком */
+const closeModal = () => {
+  modalContainer.classList.add('modal-container--hidden');
+};
+
+modalCloseButton.addEventListener('click', closeModal);
+
+/* открытие модального окна ссылкой "Хочу сюда!" в хедере */
+let navigationButton = document.querySelector('.navigation__button');
+navigationButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  modalContainer.classList.remove('modal-container--hidden');
+})
+
+/* открытие/закрытие тултипа в модальном окне */
+let tooltipText = document.querySelector('#tooltip__text');
+let tooltipButton = document.querySelector('.tooltip__button');
+
+tooltipButton.addEventListener('click', () => {
+  tooltipText.classList.toggle('tooltip__text--open');
+});
+
+/* взаимодействие с сервером и отправка формы */
+const SERVER_ADDRESS = 'https://echo.htmlacademy.ru/';
+
+const modalForm = document.querySelector('.search-form');
+const modalFormButton = modalForm.querySelector('.search-form__button');
+const modalResult = document.querySelector('.modal-result');
+const modalResultText = modalResult.querySelector('.modal-result__text');
+const modalResultButton = modalResult.querySelector('.modal-result__button');
+
+const uploadFormDataServer = (formData) => fetch( // ф-я запроса отправки данных на сервер
+  SERVER_ADDRESS,
+  {
+    method: 'POST',
+    body: formData
+  }
+);
+
+const disableModalFormButton = () => {
+  modalFormButton.disabled = true;
+  modalFormButton.textContent = 'Отправляем запрос...'
+};
+
+const undisableModalFormButton = () => {
+  modalFormButton.disabled = false;
+  modalFormButton.textContent = 'Найти'
+};
+
+const setFormData = (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target); // собираем данные из формы
+  disableModalFormButton();
+  uploadFormDataServer(formData)
+  .then(
+    (responce) => {
+      if (!responce.ok) {
+        throw new Error;
+      }
+      modalForm.reset();
+      closeModal();
+    }
+  )
+  .catch(
+    () => {
+      modalResultText.textContent = 'Что-то пошло не так... Попробуйте еще раз'
+    }
+  )
+  .finally(
+    () => {
+      modalResult.showModal();
+      undisableModalFormButton();
+    }
+  )
+};
+
+modalResultButton.addEventListener('click', () => {
+  modalResult.close();
+})
+modalForm.addEventListener('submit', setFormData);
