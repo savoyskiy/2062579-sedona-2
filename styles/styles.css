@@ -1811,6 +1811,7 @@ html {
 }
 
 .modal-result__text {
+  text-align: center;
   margin: 0;
 }
 

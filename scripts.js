@@ -40,10 +40,10 @@ const modalResult = document.querySelector('.modal-result');
 const modalResultText = modalResult.querySelector('.modal-result__text');
 const modalResultButton = modalResult.querySelector('.modal-result__button');
 
-const uploadFormDataServer = (formData) => fetch( // ф-я запроса отправки данных на сервер
+const uploadFormDataServer = (formData, formMethod) => fetch( // ф-я запроса отправки данных на сервер
   SERVER_ADDRESS,
   {
-    method: 'POST',
+    method: formMethod,
     body: formData
   }
 );
@@ -70,7 +70,7 @@ const setFormData = (event) => {
   event.preventDefault();
   const formData = new FormData(event.target); // собираем данные из формы
   disableModalFormButton();
-  uploadFormDataServer(formData)
+  uploadFormDataServer(formData, 'POST')
   .then(
     (responce) => {
       if (!responce.ok) {
@@ -118,7 +118,7 @@ const onSubmitNewsletterForm = (evt) => {
   disableNewsletterFormButton();
   const formData = new FormData(evt.target);
 
-  uploadFormDataServer(formData)
+  uploadFormDataServer(formData, 'POST')
   .then(
     (responce) => {
       if (!responce.ok) {
@@ -142,3 +142,54 @@ const onSubmitNewsletterForm = (evt) => {
 };
 
 newsletterForm.addEventListener('submit', onSubmitNewsletterForm);
+
+/* форма поиска гостиниц */
+
+const selectionForm = document.querySelector('.selection__form');
+
+if (selectionForm) {
+  const selectionFormButton = selectionForm.querySelector('.selection__button--submit');
+
+  const disableSelectionFormButton = () => {
+    selectionFormButton.disabled = true;
+  };
+
+  const unDisableSelectionFormButton = () => {
+    selectionFormButton.disabled = false;
+  };
+
+  const onSubmitSelectionForm = (evt) => {
+    evt.preventDefault();
+    disableSelectionFormButton();
+    const formData = new FormData(evt.target);
+
+    let requestData = '';
+    for (let [key, value] of formData) {
+      requestData += `${key}=${value}&`;
+    }
+    requestData = requestData.slice(0, requestData.length - 1);
+
+    fetch(`${SERVER_ADDRESS}?${requestData}`)
+    .then(
+      (responce) => {
+        if (!responce.ok) {
+          throw new Error;
+        }
+        selectionForm.reset();
+      }
+    )
+    .catch(
+      () => {
+        modalResultText.textContent = 'Что-то пошло не так... уже работаем над этим. Попробуйте еще раз позже';
+        modalResult.showModal();
+      }
+    )
+    .finally(
+      () => {
+        unDisableSelectionFormButton();
+      }
+    )
+  };
+
+  selectionForm.addEventListener('submit', onSubmitSelectionForm);
+}
