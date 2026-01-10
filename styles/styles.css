@@ -895,7 +895,8 @@ html {
 
 .selection__range-bar {
   position: absolute;
-  width: 226px;
+  left: 10px;
+  right: 10px;
   height: 4px;
   background-color: #ffffff;
 }

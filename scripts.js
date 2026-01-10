@@ -192,4 +192,77 @@ if (selectionForm) {
   };
 
   selectionForm.addEventListener('submit', onSubmitSelectionForm);
+
+
+}
+
+/* слайдер в форме поиска гостиниц */
+
+const selectionRangeScale = document.querySelector('.selection__range-scale');
+
+if (selectionRangeScale) {
+  const selectionRangeBar = selectionRangeScale.querySelector('.selection__range-bar');
+  const selectionRangeMin = selectionRangeScale.querySelector('.selection__range-min');
+  const selectionRangeMax = selectionRangeScale.querySelector('.selection__range-max');
+
+  let selectionRangeScaleRect = selectionRangeScale.getBoundingClientRect(); // определяем размер и координаты блока слайдера относительно вьюпорта
+  let rightEdgeMinButton = 25;
+  let leftEdgeMaxButton = 283;
+
+  /* левая кнопка */
+  const onMouseMoveChangeMinStyle = (evt) => {
+    const selectionRangeBarNum = evt.clientX - selectionRangeScaleRect.left;
+    if (leftEdgeMaxButton > rightEdgeMinButton && rightEdgeMinButton >= 30) {
+      selectionRangeBar.style.left = `${selectionRangeBarNum + 5}px`;
+      selectionRangeMin.style.left = `${selectionRangeBarNum - 5}px`;
+    }
+    rightEdgeMinButton = selectionRangeBarNum + 25;
+  };
+
+  const onMouseDownStartChangeMin = () => {
+    onMouseUpEndChangeMax();
+    selectionRangeScale.addEventListener('mousemove', onMouseMoveChangeMinStyle);
+  };
+
+  const onMouseUpEndChangeMin = () => {
+    selectionRangeScale.removeEventListener('mousemove', onMouseMoveChangeMinStyle);
+  };
+
+  selectionRangeMin.addEventListener('mousedown', onMouseDownStartChangeMin);
+  selectionRangeMin.addEventListener('mouseup', onMouseUpEndChangeMin);
+
+  /* правая кнопка */
+  const onMouseMoveChangeMaxStyle = (evt) => {
+    const selectionRangeBarNum = selectionRangeScaleRect.right - evt.clientX;
+    if (selectionRangeBarNum >= 0 && leftEdgeMaxButton > rightEdgeMinButton && leftEdgeMaxButton <= 278) {
+      selectionRangeBar.style.right = `${selectionRangeBarNum}px`;
+      selectionRangeMax.style.right = `${selectionRangeBarNum - 5}px`;
+    }
+    leftEdgeMaxButton = 288 - selectionRangeBarNum - 5;
+  };
+
+
+  const onMouseDownStartChangeMax = function () {
+    onMouseUpEndChangeMin();
+    selectionRangeScale.addEventListener('mousemove', onMouseMoveChangeMaxStyle);
+  };
+
+  const onMouseUpEndChangeMax = () => {
+    selectionRangeScale.removeEventListener('mousemove', onMouseMoveChangeMaxStyle);
+  };
+
+  selectionRangeMax.addEventListener('mousedown', onMouseDownStartChangeMax);
+  selectionRangeMax.addEventListener('mouseup', onMouseUpEndChangeMax);
+
+  /* */
+  const onMouseoutEndChangeSlider = () => {
+    onMouseUpEndChangeMin();
+    onMouseUpEndChangeMax();
+  };
+  selectionRangeScale.addEventListener('mouseout', onMouseoutEndChangeSlider);
+
+  /* на случай изменения разера эерана */
+  window.addEventListener('resize', () => {
+    selectionRangeScaleRect = selectionRangeScale.getBoundingClientRect();
+  });
 }
