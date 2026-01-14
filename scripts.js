@@ -194,75 +194,48 @@ if (selectionForm) {
   selectionForm.addEventListener('submit', onSubmitSelectionForm);
 
 
-}
+  /* обработка слайдера выбора цены */
+  const rangeInputMax = document.querySelector('.range-input-max');
+  const rangeInputMin = document.querySelector('.range-input-min');
 
-/* слайдер в форме поиска гостиниц */
+  const onRangeInputMax = (event) => {
+    const valueMin = parseInt(event.target.parentNode.parentNode.style.getPropertyValue('--value-min'));
 
-const selectionRangeScale = document.querySelector('.selection__range-scale');
-
-if (selectionRangeScale) {
-  const selectionRangeBar = selectionRangeScale.querySelector('.selection__range-bar');
-  const selectionRangeMin = selectionRangeScale.querySelector('.selection__range-min');
-  const selectionRangeMax = selectionRangeScale.querySelector('.selection__range-max');
-
-  let selectionRangeScaleRect = selectionRangeScale.getBoundingClientRect(); // определяем размер и координаты блока слайдера относительно вьюпорта
-  let rightEdgeMinButton = 25;
-  let leftEdgeMaxButton = 283;
-
-  /* левая кнопка */
-  const onMouseMoveChangeMinStyle = (evt) => {
-    const selectionRangeBarNum = evt.clientX - selectionRangeScaleRect.left;
-    if (leftEdgeMaxButton > rightEdgeMinButton && rightEdgeMinButton >= 30) {
-      selectionRangeBar.style.left = `${selectionRangeBarNum + 5}px`;
-      selectionRangeMin.style.left = `${selectionRangeBarNum - 5}px`;
+    if (event.target.valueAsNumber <= valueMin) {
+      event.target.value = valueMin;
     }
-    rightEdgeMinButton = selectionRangeBarNum + 25;
-  };
 
-  const onMouseDownStartChangeMin = () => {
-    onMouseUpEndChangeMax();
-    selectionRangeScale.addEventListener('mousemove', onMouseMoveChangeMinStyle);
-  };
-
-  const onMouseUpEndChangeMin = () => {
-    selectionRangeScale.removeEventListener('mousemove', onMouseMoveChangeMinStyle);
-  };
-
-  selectionRangeMin.addEventListener('mousedown', onMouseDownStartChangeMin);
-  selectionRangeMin.addEventListener('mouseup', onMouseUpEndChangeMin);
-
-  /* правая кнопка */
-  const onMouseMoveChangeMaxStyle = (evt) => {
-    const selectionRangeBarNum = selectionRangeScaleRect.right - evt.clientX;
-    if (selectionRangeBarNum >= 0 && leftEdgeMaxButton > rightEdgeMinButton && leftEdgeMaxButton <= 278) {
-      selectionRangeBar.style.right = `${selectionRangeBarNum}px`;
-      selectionRangeMax.style.right = `${selectionRangeBarNum - 5}px`;
+    if (event.target.value === '0') {
+      event.target.style.zIndex = '1';
+    } else {
+      event.target.style.zIndex = '0';
     }
-    leftEdgeMaxButton = 288 - selectionRangeBarNum - 5;
+
+    event.target.parentNode.parentNode.style.setProperty(
+      '--value-max',
+      event.target.valueAsNumber
+    )
   };
 
+  const onRangeInputMin = (event) => {
+    const valueMax = parseInt(event.target.parentNode.parentNode.style.getPropertyValue('--value-max'));
 
-  const onMouseDownStartChangeMax = function () {
-    onMouseUpEndChangeMin();
-    selectionRangeScale.addEventListener('mousemove', onMouseMoveChangeMaxStyle);
+    if (event.target.valueAsNumber >= valueMax) {
+      event.target.value = valueMax;
+    }
+
+    if (event.target.value === '12000') {
+      event.target.style.zIndex = '1';
+    } else {
+      event.target.style.zIndex = '0';
+    }
+
+    event.target.parentNode.parentNode.style.setProperty(
+      '--value-min',
+      event.target.valueAsNumber
+    )
   };
 
-  const onMouseUpEndChangeMax = () => {
-    selectionRangeScale.removeEventListener('mousemove', onMouseMoveChangeMaxStyle);
-  };
-
-  selectionRangeMax.addEventListener('mousedown', onMouseDownStartChangeMax);
-  selectionRangeMax.addEventListener('mouseup', onMouseUpEndChangeMax);
-
-  /* */
-  const onMouseoutEndChangeSlider = () => {
-    onMouseUpEndChangeMin();
-    onMouseUpEndChangeMax();
-  };
-  selectionRangeScale.addEventListener('mouseout', onMouseoutEndChangeSlider);
-
-  /* на случай изменения разера эерана */
-  window.addEventListener('resize', () => {
-    selectionRangeScaleRect = selectionRangeScale.getBoundingClientRect();
-  });
+  rangeInputMax.addEventListener('input', onRangeInputMax);
+  rangeInputMin.addEventListener('input', onRangeInputMin);
 }

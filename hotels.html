@@ -136,16 +136,18 @@
                 </li>
               </ul>
 
-              <div class="selection__price-slider">
-                <div class="selection__range-scale">
-                  <div class="selection__range-bar">
-                  </div>
-                  <button class="selection__range-button selection__range-min" type="button">
-                    <span class="visually-hidden">Установить минимальную цену</span>
-                  </button>
-                  <button class="selection__range-button selection__range-max" type="button">
-                    <span class="visually-hidden">Установить максимальную цену</span>
-                  </button>
+              <div class="selection__price-slider" style="--value-min: 0; --value-max: 9000;">
+                <label class="visually-hidden selection__range-label" for="price-range-min">
+                  Слайдер выбора минимального значения стоимости
+                </label>
+                <label class="visually-hidden selection__range-label" for="price-range-max">
+                  Слайдер выбора максимального значения стоимости
+                </label>
+                <div class="selection__range-track"></div>
+                <div class="selection__range-progress"></div>
+                <div class="selection__range-thumbs">
+                  <input class="selection__range-input range-input-min" id="price-range-min" type="range" min="0" max="12000" value="0" step="1">
+                  <input class="selection__range-input range-input-max" id="price-range-max" type="range" min="0" max="12000" value="9000" step="1">
                 </div>
               </div>
 
