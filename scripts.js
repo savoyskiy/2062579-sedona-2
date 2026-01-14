@@ -195,8 +195,11 @@ if (selectionForm) {
 
 
   /* обработка слайдера выбора цены */
-  const rangeInputMax = document.querySelector('.range-input-max');
-  const rangeInputMin = document.querySelector('.range-input-min');
+  const selectionPriceSlider = selectionForm.querySelector('.selection__price-slider');
+  const rangeInputMax = selectionForm.querySelector('.range-input-max');
+  const rangeInputMin = selectionForm.querySelector('.range-input-min');
+  const selectionMinPrice = selectionForm.querySelector('.selection__min-price');
+  const selectionMaxPrice = selectionForm.querySelector('.selection__max-price');
 
   const onRangeInputMax = (event) => {
     const valueMin = parseInt(event.target.parentNode.parentNode.style.getPropertyValue('--value-min'));
@@ -215,6 +218,7 @@ if (selectionForm) {
       '--value-max',
       event.target.valueAsNumber
     )
+    selectionMaxPrice.value = event.target.valueAsNumber;
   };
 
   const onRangeInputMin = (event) => {
@@ -234,8 +238,29 @@ if (selectionForm) {
       '--value-min',
       event.target.valueAsNumber
     )
+    selectionMinPrice.value = event.target.valueAsNumber;
   };
 
   rangeInputMax.addEventListener('input', onRangeInputMax);
   rangeInputMin.addEventListener('input', onRangeInputMin);
+
+  /* взаимодействие с полями ввода цены */
+  const onChangeMinPrice = () => {
+    rangeInputMin.value = selectionMinPrice.value;
+    selectionPriceSlider.style.setProperty(
+      '--value-min',
+      selectionMinPrice.value
+    )
+  };
+
+  const onChangeMaxPrice = () => {
+    rangeInputMax.value = selectionMaxPrice.value;
+    selectionPriceSlider.style.setProperty(
+      '--value-max',
+      selectionMaxPrice.value
+    )
+  };
+
+  selectionMinPrice.addEventListener('change', onChangeMinPrice);
+  selectionMaxPrice.addEventListener('change', onChangeMaxPrice);
 }
