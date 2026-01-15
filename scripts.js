@@ -176,6 +176,7 @@ if (selectionForm) {
           throw new Error;
         }
         selectionForm.reset();
+        onResetButton();
       }
     )
     .catch(
@@ -281,14 +282,15 @@ if (selectionForm) {
   selectionMinPrice.addEventListener('change', onChangeMinPrice);
   selectionMaxPrice.addEventListener('change', onChangeMaxPrice);
 
-  selectionButtonReset.addEventListener('click', () => {
+  const onResetButton = function () {
     selectionPriceSlider.style.setProperty(
       '--value-min',
       0
-    )
+    );
     selectionPriceSlider.style.setProperty(
       '--value-max',
       9000
-    )
-  })
+    );
+  };
+  selectionButtonReset.addEventListener('click', onResetButton);
 }
