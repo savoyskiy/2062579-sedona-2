@@ -202,6 +202,11 @@ if (selectionForm) {
   const selectionMinPrice = selectionForm.querySelector('.selection__min-price');
   const selectionMaxPrice = selectionForm.querySelector('.selection__max-price');
   const selectionButtonReset = selectionForm.querySelector('.selection__button--reset');
+  const priceParameters = {
+    minPrice: 0,
+    maxPrice: 12000,
+    startMaxPrice: 9000
+  };
 
   const onRangeInputMax = (event) => {
     const valueMin = parseInt(event.target.parentNode.parentNode.style.getPropertyValue('--value-min'));
@@ -210,7 +215,7 @@ if (selectionForm) {
       event.target.value = valueMin;
     }
 
-    if (event.target.value === '0') {
+    if (event.target.value === `${priceParameters.minPrice}`) {
       event.target.style.zIndex = '1';
     } else {
       event.target.style.zIndex = '0';
@@ -230,7 +235,7 @@ if (selectionForm) {
       event.target.value = valueMax;
     }
 
-    if (event.target.value === '12000') {
+    if (event.target.value === `${priceParameters.maxPrice}`) {
       event.target.style.zIndex = '1';
     } else {
       event.target.style.zIndex = '0';
@@ -250,10 +255,10 @@ if (selectionForm) {
   const onChangeMinPrice = () => {
     if (parseInt(selectionMinPrice.value) > parseInt(selectionMaxPrice.value)) {
       selectionMinPrice.value = selectionMaxPrice.value;
-    } else if (parseInt(selectionMinPrice.value) < 0) {
-      selectionMinPrice.value = 0;
-    } else if (parseInt(selectionMinPrice.value) > 12000) {
-      selectionMinPrice.value = 12000;
+    } else if (parseInt(selectionMinPrice.value) < priceParameters.minPrice) {
+      selectionMinPrice.value = priceParameters.minPrice;
+    } else if (parseInt(selectionMinPrice.value) > priceParameters.maxPrice) {
+      selectionMinPrice.value = priceParameters.maxPrice;
     }
 
     rangeInputMin.value = selectionMinPrice.value;
@@ -266,10 +271,10 @@ if (selectionForm) {
   const onChangeMaxPrice = () => {
     if (parseInt(selectionMaxPrice.value) < parseInt(selectionMinPrice.value)) {
       selectionMaxPrice.value = selectionMinPrice.value;
-    } else if (parseInt(selectionMaxPrice.value) < 0) {
-      selectionMaxPrice.value = 0;
-    } else if (parseInt(selectionMaxPrice.value) > 12000) {
-      selectionMaxPrice.value = 12000;
+    } else if (parseInt(selectionMaxPrice.value) < priceParameters.minPrice) {
+      selectionMaxPrice.value = priceParameters.minPrice;
+    } else if (parseInt(selectionMaxPrice.value) > priceParameters.maxPrice) {
+      selectionMaxPrice.value = priceParameters.maxPrice;
     }
 
     rangeInputMax.value = selectionMaxPrice.value;
@@ -285,11 +290,11 @@ if (selectionForm) {
   const onResetButton = function () {
     selectionPriceSlider.style.setProperty(
       '--value-min',
-      0
+      priceParameters.minPrice
     );
     selectionPriceSlider.style.setProperty(
       '--value-max',
-      9000
+      priceParameters.startMaxPrice
     );
   };
   selectionButtonReset.addEventListener('click', onResetButton);
